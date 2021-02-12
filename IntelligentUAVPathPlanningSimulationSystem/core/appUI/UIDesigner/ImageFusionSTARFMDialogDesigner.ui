@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ImageFusionSTARFMDialog</class>
+ <widget class="QDialog" name="ImageFusionSTARFMDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>880</width>
+    <height>465</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>STARFM图像融合</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QGroupBox" name="groupBox_2">
+       <property name="title">
+        <string>Tk时刻影像对</string>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="0" column="0">
+         <widget class="QLabel" name="openTkCoarseResolutionImageLabel">
+          <property name="text">
+           <string>Tk输入低分影像：</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="openTkCoarseResolutionImageLineEdit"/>
+        </item>
+        <item row="0" column="2">
+         <widget class="QPushButton" name="openTkCoarseResolutionImagePushButton">
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="openTkFineResolutionImageLabel">
+          <property name="text">
+           <string>Tk输入高分影像：</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="openTkFineResolutionImageLineEdit"/>
+        </item>
+        <item row="1" column="2">
+         <widget class="QPushButton" name="openTkFineResolutionImagePushButton">
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QGroupBox" name="groupBox">
+       <property name="title">
+        <string>T0时刻影像对</string>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="0" column="0">
+         <widget class="QLabel" name="openT0CoarseResolutionImageLabel">
+          <property name="text">
+           <string>T0输入低分影像：</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="openT0CoarseResolutionImageLineEdit"/>
+        </item>
+        <item row="0" column="2">
+         <widget class="QPushButton" name="openT0CoarseResolutionImagePushButton">
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QGroupBox" name="statusGroupBox">
+       <property name="title">
+        <string>参数得分图表</string>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QTextEdit" name="statusTextEdit"/>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="parametersSettingsGroupBox">
+          <property name="title">
+           <string>参数设置</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout">
+           <item row="6" column="0" colspan="2">
+            <widget class="QLabel" name="selectT0FineResolutionImageSaveDirLabel">
+             <property name="text">
+              <string>T0拟合高分影像保存路径：</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0">
+            <widget class="QLabel" name="windowSizeLabel">
+             <property name="text">
+              <string>窗口尺寸：</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="constantSLabel">
+             <property name="text">
+              <string>系数S：</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="7">
+            <widget class="QPushButton" name="selectT0FineResolutionImageSaveDirPushButton">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="0" colspan="7">
+            <widget class="QLineEdit" name="selectT0FineResolutionImageSaveDirLineEdit"/>
+           </item>
+           <item row="1" column="3">
+            <widget class="QLineEdit" name="stopConstantSLineEdit">
+             <property name="text">
+              <string>1.0</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="constantALabel">
+             <property name="text">
+              <string>系数A：</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="3">
+            <widget class="QLineEdit" name="stopConstantDLineEdit">
+             <property name="text">
+              <string>1.0</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLineEdit" name="startConstantSLineEdit">
+             <property name="text">
+              <string>1.0</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="3">
+            <widget class="QLineEdit" name="stopConstantALineEdit">
+             <property name="text">
+              <string>1.0</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLabel" name="startLabel">
+             <property name="text">
+              <string>起始值</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="3">
+            <widget class="QLineEdit" name="stopWindowSizeLineEdit">
+             <property name="text">
+              <string>19</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="5" colspan="2">
+            <widget class="QLineEdit" name="stepConstantSLineEdit">
+             <property name="text">
+              <string>1.0</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="5" colspan="2">
+            <widget class="QLineEdit" name="stepConstantDLineEdit">
+             <property name="text">
+              <string>1.0</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="1">
+            <widget class="QLineEdit" name="startWindowSizeLineEdit">
+             <property name="text">
+              <string>15</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="constantTLabel">
+             <property name="text">
+              <string>系数T：</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <widget class="QLineEdit" name="startConstantALineEdit">
+             <property name="text">
+              <string>1.0</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLineEdit" name="startConstantTLineEdit">
+             <property name="text">
+              <string>1.0</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="3">
+            <widget class="QLineEdit" name="stepConstantTLineEdit_2">
+             <property name="text">
+              <string>1.0</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="5" colspan="2">
+            <widget class="QLineEdit" name="stepConstantTLineEdit">
+             <property name="text">
+              <string>1.0</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="5" colspan="2">
+            <widget class="QLineEdit" name="stepConstantALineEdit">
+             <property name="text">
+              <string>1.0</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="constantDLabel">
+             <property name="text">
+              <string>系数D：</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QLineEdit" name="startConstantDLineEdit">
+             <property name="text">
+              <string>1.0</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="3">
+            <widget class="QLabel" name="stopLabel">
+             <property name="text">
+              <string>终止值</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="5" colspan="2">
+            <widget class="QLineEdit" name="stepWindowSizeLineEdit">
+             <property name="text">
+              <string>2</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <spacer name="horizontalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="0" column="5">
+            <widget class="QLabel" name="stepLabel">
+             <property name="text">
+              <string>取值间隔</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="4">
+            <spacer name="horizontalSpacer_3">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="okPushButton">
+       <property name="text">
+        <string>确定</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="cancelPushButton">
+       <property name="text">
+        <string>取消</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

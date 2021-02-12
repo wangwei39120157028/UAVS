@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>402</width>
+    <height>676</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>iPyGIRS V0.2.3</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <property name="spacing">
+     <number>5</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QTreeWidget" name="toolBoxTreeWidget">
+      <property name="headerHidden">
+       <bool>true</bool>
+      </property>
+      <column>
+       <property name="text">
+        <string notr="true">1</string>
+       </property>
+      </column>
+      <item>
+       <property name="text">
+        <string>数据管理</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>创建样本</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>预处理</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>归一化/标准化</string>
+         </property>
+        </item>
+       </item>
+       <item>
+        <property name="text">
+         <string>特征处理</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>特征构建</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>特征选择</string>
+         </property>
+        </item>
+       </item>
+      </item>
+      <item>
+       <property name="text">
+        <string>数理统计</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>经验统计模型</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>应用方程</string>
+        </property>
+       </item>
+      </item>
+      <item>
+       <property name="text">
+        <string>地理处理</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>像元值提取</string>
+        </property>
+       </item>
+      </item>
+      <item>
+       <property name="text">
+        <string>栅格数据</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>波段计算器</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>波段分离（当前版本不可用）</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>波段合并（当前版本不可用）</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>图像平滑（当前版本不可用）</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>移动平均平滑（当前版本不可用）</string>
+         </property>
+        </item>
+       </item>
+       <item>
+        <property name="text">
+         <string>图像融合（当前版本不可用）</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>STARFM融合</string>
+         </property>
+        </item>
+       </item>
+      </item>
+      <item>
+       <property name="text">
+        <string>机器学习</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>scikit-learn机器学习</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>TPOT机器学习（当前版本不可用）</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>应用模型</string>
+        </property>
+       </item>
+      </item>
+      <item>
+       <property name="text">
+        <string>数据库</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>MySQL数据库管理</string>
+        </property>
+       </item>
+      </item>
+      <item>
+       <property name="text">
+        <string>地图服务</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>Geoserver工具</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>WMS服务发布</string>
+         </property>
+        </item>
+       </item>
+      </item>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

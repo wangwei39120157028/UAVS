@@ -1,0 +1,1830 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MLRegressorDialog</class>
+ <widget class="QDialog" name="MLRegressorDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1061</width>
+    <height>694</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <layout class="QVBoxLayout" name="topDialogVerticalLayout" stretch="0,0,0">
+   <property name="spacing">
+    <number>5</number>
+   </property>
+   <property name="leftMargin">
+    <number>5</number>
+   </property>
+   <property name="topMargin">
+    <number>10</number>
+   </property>
+   <property name="rightMargin">
+    <number>5</number>
+   </property>
+   <property name="bottomMargin">
+    <number>10</number>
+   </property>
+   <item>
+    <layout class="QGridLayout" name="topTipGridLayout">
+     <property name="bottomMargin">
+      <number>10</number>
+     </property>
+     <item row="0" column="1">
+      <widget class="QLabel" name="currentOperationTipLabel">
+       <property name="font">
+        <font>
+         <family>Aharoni</family>
+         <pointsize>16</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>选择样本</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLabel" name="currentOperationDescriptionLabel">
+       <property name="text">
+        <string>选择训练模型所用的样本数据</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0" rowspan="2">
+      <widget class="QLabel" name="currentOperationLogoLabel">
+       <property name="text">
+        <string>TextLabel</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <spacer name="topTipGridLayoutHorizontalSpacer1">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="1" column="2">
+      <spacer name="topTipGridLayoutHorizontalSpacer2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QStackedWidget" name="regressorSettingStackedWidget">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="selectSamplePage">
+      <layout class="QVBoxLayout" name="selectSampleVerticalLayout" stretch="0,1">
+       <property name="spacing">
+        <number>5</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>10</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>10</number>
+       </property>
+       <item>
+        <widget class="QGroupBox" name="sampleSettingGroupBox">
+         <property name="title">
+          <string>样本设置</string>
+         </property>
+         <layout class="QGridLayout" name="sampleSettingGroupBoxGridLayout">
+          <property name="verticalSpacing">
+           <number>15</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QLabel" name="sampleTypeLabel">
+            <property name="maximumSize">
+             <size>
+              <width>100</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>样本文件类型：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="selectTrainingValidationSampleLabel">
+            <property name="maximumSize">
+             <size>
+              <width>100</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>训练-验证样本：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="11">
+           <widget class="QPushButton" name="selectTestSamplePushButton">
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLabel" name="selectTestSampleLabel">
+            <property name="maximumSize">
+             <size>
+              <width>100</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>测试样本（可选）：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1" colspan="10">
+           <widget class="QLineEdit" name="selectTestSampleLineEdit"/>
+          </item>
+          <item row="3" column="11">
+           <widget class="QPushButton" name="selectTrainingValidationSamplePushButton">
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1" colspan="10">
+           <widget class="QLineEdit" name="selectTrainingValidationSampleLineEdit"/>
+          </item>
+          <item row="0" column="4">
+           <widget class="QCheckBox" name="isIncludeColTitleCheckBox">
+            <property name="text">
+             <string>包含列标题</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="8">
+           <spacer name="sampleSettingGroupBoxHorizontalSpacer3">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="0" column="1">
+           <widget class="QCheckBox" name="isIncludeRowTitleCheckBox">
+            <property name="text">
+             <string>包含行标题</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="7">
+           <widget class="QRadioButton" name="isRowMajorRadioButton">
+            <property name="text">
+             <string>行优先</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <spacer name="sampleSettingGroupBoxHorizontalSpacer1">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="0" column="9">
+           <widget class="QRadioButton" name="isColMajorRadioButton">
+            <property name="text">
+             <string>列优先</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="6">
+           <spacer name="sampleSettingGroupBoxHorizontalSpacer2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="frame">
+         <property name="styleSheet">
+          <string notr="true">background-color:white</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Sunken</enum>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <property name="spacing">
+           <number>5</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <layout class="QHBoxLayout" name="sampleStatisticChartHorizontalLayout"/>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="parameterSettingPage">
+      <layout class="QVBoxLayout" name="verticalLayout_3" stretch="0,1">
+       <property name="spacing">
+        <number>5</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>10</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>10</number>
+       </property>
+       <item>
+        <widget class="QGroupBox" name="parameterSettingGroupBox">
+         <property name="title">
+          <string/>
+         </property>
+         <layout class="QVBoxLayout" name="parameterSettingGroupBoxVerticalLayout" stretch="0,0">
+          <property name="spacing">
+           <number>10</number>
+          </property>
+          <item>
+           <layout class="QGridLayout" name="parameterSettingGroupBoxGridLayout">
+            <property name="verticalSpacing">
+             <number>20</number>
+            </property>
+            <item row="0" column="2">
+             <spacer name="parameterSettingGroupBox1HorizontalSpacer1">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item row="1" column="1" colspan="6">
+             <widget class="QLineEdit" name="selectParameterFileLineEdit">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="selectParameterFileLabel">
+              <property name="minimumSize">
+               <size>
+                <width>60</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>60</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>参数文件：</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="6">
+             <spacer name="parameterSettingGroupBox1HorizontalSpacer3">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item row="0" column="4">
+             <spacer name="parameterSettingGroupBox1HorizontalSpacer2">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item row="1" column="7">
+             <widget class="QPushButton" name="selectParameterFilePushButton">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="5">
+             <widget class="QRadioButton" name="importParameterRadioButton">
+              <property name="text">
+               <string>导入参数</string>
+              </property>
+              <property name="checked">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="3">
+             <widget class="QRadioButton" name="initParameterRadioButton">
+              <property name="text">
+               <string>初始化参数</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0">
+             <widget class="QLabel" name="selectRegressorLabel">
+              <property name="maximumSize">
+               <size>
+                <width>60</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>回归模型：</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QComboBox" name="selectRegressorComboBox">
+              <property name="currentIndex">
+               <number>3</number>
+              </property>
+              <item>
+               <property name="text">
+                <string>线性回归</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>支持向量机</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>BP神经网络</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>随机森林</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>梯度提升树</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QStackedWidget" name="regressorParameterSettingStackedWidget">
+            <property name="currentIndex">
+             <number>2</number>
+            </property>
+            <widget class="QWidget" name="linearRegressorPage">
+             <layout class="QHBoxLayout" name="linearRegressorHorizontalLayout">
+              <item>
+               <widget class="QLabel" name="linearRegressorNoParameterLabel">
+                <property name="font">
+                 <font>
+                  <family>Aharoni</family>
+                  <pointsize>8</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">color:gray</string>
+                </property>
+                <property name="text">
+                 <string>提示：线性回归模型无参数设置和调试参数项！</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="svrRegressorPage">
+             <layout class="QGridLayout" name="svrRegressorGridLayout">
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <property name="horizontalSpacing">
+               <number>5</number>
+              </property>
+              <property name="verticalSpacing">
+               <number>15</number>
+              </property>
+              <item row="0" column="2">
+               <spacer name="svrParameterSettingHorizontalSpacer1">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="0" column="7">
+               <spacer name="svrParameterSettingHorizontalSpacer4">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="0" column="0">
+               <widget class="QLabel" name="svrKernelFunctionLabel">
+                <property name="minimumSize">
+                 <size>
+                  <width>65</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>核函数：</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="4">
+               <widget class="QComboBox" name="svrKernelCoefficientComboBox">
+                <property name="currentIndex">
+                 <number>1</number>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>1 / N</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>1 / （N * X.std）</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QComboBox" name="svrKernelFunctionComboBox">
+                <property name="currentIndex">
+                 <number>3</number>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>线性核函数</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>多项式核函数</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>sigmoid核函数</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>径向基函数（rbf）</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item row="0" column="3">
+               <widget class="QLabel" name="svrKernelCoefficientLabel">
+                <property name="text">
+                 <string>核系数：</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="5">
+               <spacer name="svrParameterSettingHorizontalSpacer2">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="0" column="6">
+               <spacer name="svrParameterSettingHorizontalSpacer3">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="bpnnRegressorPage">
+             <layout class="QGridLayout" name="bpnnRegressorGridLayout">
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <property name="horizontalSpacing">
+               <number>5</number>
+              </property>
+              <property name="verticalSpacing">
+               <number>15</number>
+              </property>
+              <item row="0" column="8">
+               <widget class="QLabel" name="activationFunctionLabel">
+                <property name="minimumSize">
+                 <size>
+                  <width>65</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>激活函数：</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="0">
+               <widget class="QLabel" name="nnStructureLabel">
+                <property name="text">
+                 <string>网络结构：</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="12">
+               <spacer name="bpnnParameterSettingHorizontalSpacer3">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="0" column="15">
+               <spacer name="bpnnParameterSettingHorizontalSpacer4">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="0" column="6">
+               <spacer name="bpnnParameterSettingHorizontalSpacer1">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="0" column="2" colspan="4">
+               <widget class="QLineEdit" name="nnStructureLineEdit"/>
+              </item>
+              <item row="0" column="14">
+               <widget class="QComboBox" name="optimizationAlgorithmComboBox">
+                <property name="currentIndex">
+                 <number>2</number>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>lbfgs</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>sgd</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>adam</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item row="0" column="9">
+               <widget class="QComboBox" name="activationFunctionComboBox">
+                <property name="currentIndex">
+                 <number>3</number>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>f(x) = x</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>logistic</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>tanh</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>relu</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item row="0" column="13">
+               <widget class="QLabel" name="optimizationAlgorithmLabel">
+                <property name="text">
+                 <string>优化算法：</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="7">
+               <spacer name="bpnnParameterSettingHorizontalSpacer2">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="rfRegressorPage">
+             <layout class="QGridLayout" name="rfRegressorGridLayout">
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>5</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <property name="horizontalSpacing">
+               <number>5</number>
+              </property>
+              <property name="verticalSpacing">
+               <number>15</number>
+              </property>
+              <item row="0" column="9">
+               <widget class="QCheckBox" name="isCalculateOOBScoreCheckBox">
+                <property name="text">
+                 <string>计算袋外得分（OOB）</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="6">
+               <spacer name="rfParameterSettingHorizontalSpacer2">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="0" column="2">
+               <spacer name="rfParameterSettingHorizontalSpacer1">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="0" column="7">
+               <widget class="QCheckBox" name="isUsingBootstrapCheckBox">
+                <property name="text">
+                 <string>使用自助采样法</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="8">
+               <spacer name="rfParameterSettingHorizontalSpacer3">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="0" column="4">
+               <widget class="QLabel" name="maxFeatureLabel">
+                <property name="text">
+                 <string>最大特征：</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="5">
+               <widget class="QComboBox" name="maxFeatureComboBox"/>
+              </item>
+              <item row="0" column="1">
+               <widget class="QComboBox" name="splitStandardComboBox"/>
+              </item>
+              <item row="0" column="0">
+               <widget class="QLabel" name="splitStandardLabel">
+                <property name="minimumSize">
+                 <size>
+                  <width>65</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>分裂标准：</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="gbmRegressorPage">
+             <layout class="QGridLayout" name="gbmRegressorGridLayout">
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <property name="horizontalSpacing">
+               <number>5</number>
+              </property>
+              <property name="verticalSpacing">
+               <number>15</number>
+              </property>
+              <item row="0" column="4">
+               <widget class="QComboBox" name="featureReturnTypeComboBox">
+                <item>
+                 <property name="text">
+                  <string>split</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>gain</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item row="0" column="0">
+               <widget class="QLabel" name="boostingTypeLabel">
+                <property name="minimumSize">
+                 <size>
+                  <width>65</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>boosting：</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QComboBox" name="boostingTypeComboBox">
+                <item>
+                 <property name="text">
+                  <string>gbdt</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>dart</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>goss</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>rf</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item row="0" column="3">
+               <widget class="QLabel" name="featureReturnTypeLabel">
+                <property name="text">
+                 <string>特征返回类型：</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="6">
+               <spacer name="gbmParameterSettingHorizontalSpacer3">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="0" column="7">
+               <spacer name="gbmParameterSettingHorizontalSpacer4">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="0" column="5">
+               <spacer name="gbmParameterSettingHorizontalSpacer2">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="0" column="2">
+               <spacer name="gbmParameterSettingHorizontalSpacer1">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="debugingParameterVerticalLayout">
+         <property name="topMargin">
+          <number>5</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="debugingParameterLabel">
+           <property name="text">
+            <string>调试参数项：</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QTableWidget" name="debugingParameterTableWidget"/>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="trainingModelPage">
+      <layout class="QHBoxLayout" name="trainingModelHorizontalLayout">
+       <property name="spacing">
+        <number>5</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>10</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>10</number>
+       </property>
+       <item>
+        <widget class="QGroupBox" name="initModelInfoGroupBox">
+         <property name="title">
+          <string>模型信息</string>
+         </property>
+         <layout class="QHBoxLayout" name="initModelInfoHorizontalLayout">
+          <item>
+           <widget class="QTextBrowser" name="initModelInfoTextBrowser">
+            <property name="styleSheet">
+             <string notr="true">background:rgb(240,240,240)</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::NoFrame</enum>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="trainingModelResultVerticalLayout">
+         <item>
+          <widget class="QGroupBox" name="trainModelGroupBox">
+           <property name="title">
+            <string>训练模型</string>
+           </property>
+           <layout class="QGridLayout" name="trainingModelGridLayout">
+            <item row="1" column="3">
+             <widget class="QPushButton" name="trainModelPushButton">
+              <property name="text">
+               <string>训练</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0">
+             <widget class="QLabel" name="kFoldCVLabel">
+              <property name="text">
+               <string>交叉验证（K）：</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QLineEdit" name="kFoldCVLineEdit"/>
+            </item>
+            <item row="2" column="1">
+             <widget class="QComboBox" name="processorCountComboBox"/>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="processorCountLabel">
+              <property name="text">
+               <string>工作核心数：</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="2">
+             <spacer name="trainingModelHorizontalSpacer">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item row="2" column="3">
+             <widget class="QLabel" name="trainingStatusLabel">
+              <property name="text">
+               <string>TextLabel</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="modelResultGroupBox">
+           <property name="title">
+            <string>结果</string>
+           </property>
+           <layout class="QGridLayout" name="modelResultGridLayout">
+            <item row="2" column="2">
+             <widget class="QLabel" name="trainingResultMSELabel">
+              <property name="text">
+               <string>-</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="3">
+             <widget class="QLabel" name="modelResultR2Label">
+              <property name="text">
+               <string>R2</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QLabel" name="modelResultSampleCountLabel">
+              <property name="text">
+               <string>样本数</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="3">
+             <widget class="QLabel" name="trainingResultR2Label">
+              <property name="text">
+               <string>-</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="3">
+             <widget class="QLabel" name="testResultR2Label">
+              <property name="text">
+               <string>-</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="3">
+             <widget class="QLabel" name="validationResultR2Label">
+              <property name="text">
+               <string>-</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="0">
+             <widget class="QLabel" name="testResultLabel">
+              <property name="text">
+               <string>测试：</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="trainingResultLabel">
+              <property name="text">
+               <string>训练：</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0">
+             <widget class="QLabel" name="validationResultLabel">
+              <property name="text">
+               <string>验证：</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="2">
+             <widget class="QLabel" name="modelResultMSELabel">
+              <property name="text">
+               <string>MSE</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="2">
+             <widget class="QLabel" name="validationResultMSELabel">
+              <property name="text">
+               <string>-</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="1">
+             <widget class="QLabel" name="testResulSampleCounttLabel">
+              <property name="text">
+               <string>-</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="2">
+             <widget class="QLabel" name="testResultMSELabel">
+              <property name="text">
+               <string>-</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QLabel" name="trainingResultSampleCountLabel">
+              <property name="text">
+               <string>-</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="1">
+             <widget class="QLabel" name="testResulSampleCountLabel">
+              <property name="text">
+               <string>-</string>
+              </property>
+             </widget>
+            </item>
+            <item row="5" column="0" colspan="4">
+             <widget class="Line" name="evaluationLine">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item row="6" column="3">
+             <widget class="QPushButton" name="plotEvaluationChartPushButton">
+              <property name="text">
+               <string>绘制模型评估图表</string>
+              </property>
+             </widget>
+            </item>
+            <item row="6" column="2">
+             <widget class="QPushButton" name="plotTrainingInfoPushButton">
+              <property name="text">
+               <string>绘制训练信息图表</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="optimizationModelPage">
+      <layout class="QHBoxLayout" name="optimizationModelHorizontalLayout" stretch="0,1">
+       <property name="spacing">
+        <number>5</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>10</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>10</number>
+       </property>
+       <item>
+        <widget class="QGroupBox" name="optimizationModelGroupBox">
+         <property name="title">
+          <string>优化模型</string>
+         </property>
+         <layout class="QGridLayout" name="optimizationModelGridLayout">
+          <item row="10" column="0">
+           <spacer name="optimizationModelVerticalSpacer3">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="8" column="0">
+           <widget class="QLabel" name="importLargerDatasetLabel2">
+            <property name="text">
+             <string>更多的数据以增加训练模型的样本数量！</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0" colspan="2">
+           <widget class="QLabel" name="retrainModelLabel">
+            <property name="text">
+             <string>如果第一次训练没得到较好的结果，希望进一步提高模型性能?</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QPushButton" name="retrainModePushButton">
+            <property name="text">
+             <string>重新训练</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLabel" name="changeModelParameterLabel">
+            <property name="text">
+             <string>如果重新训练模型无效，则修改模型参数。</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <spacer name="optimizationModelHorizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="7" column="0" colspan="2">
+           <widget class="QLabel" name="importLargerDatasetLabel1">
+            <property name="text">
+             <string>以上操作均无效？您可能需要重新进行数据预处理或者获取</string>
+            </property>
+           </widget>
+          </item>
+          <item row="9" column="1">
+           <widget class="QPushButton" name="importLargerDatasetPushButton">
+            <property name="text">
+             <string>导入更大的数据集</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="1">
+           <widget class="QPushButton" name="changeModelParameterPushButton">
+            <property name="text">
+             <string>调整模型参数</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="0">
+           <spacer name="optimizationModelVerticalSpacer2">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="3" column="0">
+           <spacer name="optimizationModelVerticalSpacer1">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="newEvaluationGroupBox">
+         <property name="title">
+          <string>使用新试数据评估模型</string>
+         </property>
+         <layout class="QGridLayout" name="newEvaluationGridLayout">
+          <item row="0" column="4">
+           <widget class="QPushButton" name="selectNewTestSamplePushButton">
+            <property name="text">
+             <string>……</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="selectNewTestSampleLabel">
+            <property name="text">
+             <string>测试样本：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="17" column="4">
+           <widget class="QPushButton" name="plotFittingScatterChartPushButton">
+            <property name="text">
+             <string>绘制拟合散点图</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0" rowspan="9" colspan="5">
+           <widget class="Line" name="newEvaluationLine1">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="14" column="0" rowspan="2" colspan="5">
+           <widget class="Line" name="newEvaluationLine2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="11" column="4">
+           <widget class="QPushButton" name="newTestModelPushButton">
+            <property name="text">
+             <string>测试</string>
+            </property>
+           </widget>
+          </item>
+          <item row="9" column="2">
+           <widget class="QLabel" name="newFeatureCountLabel">
+            <property name="text">
+             <string>特征数</string>
+            </property>
+           </widget>
+          </item>
+          <item row="18" column="4">
+           <widget class="QPushButton" name="plotErrorHistogramChartPushButton">
+            <property name="text">
+             <string>绘制误差直方图</string>
+            </property>
+           </widget>
+          </item>
+          <item row="18" column="2">
+           <widget class="QLabel" name="newEvaluationR2ValueLabel">
+            <property name="text">
+             <string>-</string>
+            </property>
+           </widget>
+          </item>
+          <item row="17" column="2">
+           <widget class="QLabel" name="newEvaluationR2Label">
+            <property name="text">
+             <string>R2</string>
+            </property>
+           </widget>
+          </item>
+          <item row="11" column="2">
+           <widget class="QLabel" name="newTestFeatureCountLabel">
+            <property name="text">
+             <string>-</string>
+            </property>
+           </widget>
+          </item>
+          <item row="11" column="1">
+           <widget class="QLabel" name="newTestSampleCountLabel">
+            <property name="text">
+             <string>-</string>
+            </property>
+           </widget>
+          </item>
+          <item row="11" column="0">
+           <widget class="QLabel" name="newTestSampleLabel">
+            <property name="text">
+             <string>测试样本：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="9" column="1">
+           <widget class="QLabel" name="newSampleCountLabel">
+            <property name="text">
+             <string>样本量</string>
+            </property>
+           </widget>
+          </item>
+          <item row="18" column="1">
+           <widget class="QLabel" name="newEvaluationMSEValueLabel">
+            <property name="text">
+             <string>-</string>
+            </property>
+           </widget>
+          </item>
+          <item row="17" column="1">
+           <widget class="QLabel" name="newEvaluationMSELabel">
+            <property name="text">
+             <string>MSE</string>
+            </property>
+           </widget>
+          </item>
+          <item row="19" column="1">
+           <spacer name="newEvaluationVerticalSpacer3">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="7" column="0">
+           <spacer name="newEvaluationVerticalSpacer1">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="12" column="2">
+           <spacer name="newEvaluationVerticalSpacer2">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="0" column="1" colspan="3">
+           <widget class="QLineEdit" name="selectNewTestSampleLineEdit"/>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="saveModelDataPage">
+      <layout class="QHBoxLayout" name="saveModelDataHorizontalLayout">
+       <property name="spacing">
+        <number>5</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>10</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>10</number>
+       </property>
+       <item>
+        <widget class="QGroupBox" name="saveResultDataGroupBox">
+         <property name="title">
+          <string/>
+         </property>
+         <layout class="QVBoxLayout" name="saveResultDataVerticalLayout">
+          <item>
+           <layout class="QFormLayout" name="saveResultDataFormLayout">
+            <item row="0" column="0">
+             <widget class="QCheckBox" name="isSaveBestModelToXMLCheckBox">
+              <property name="text">
+               <string>保存最优模型到本地文件（xml）的文件名</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QLineEdit" name="isSaveBestModelToXMLLineEdit"/>
+            </item>
+            <item row="1" column="0">
+             <widget class="QCheckBox" name="isSaveModelDataToExcelFileNameCheckBox">
+              <property name="text">
+               <string>保存模型训练数据、验证数据及测试数据结果到本地文件（Excel）的文件名：</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QLineEdit" name="isSaveModelDataToExcelFileNameLineEdit"/>
+            </item>
+            <item row="2" column="0">
+             <widget class="QCheckBox" name="isSaveTrainingDataToWorkingSheetNameCheckBox">
+              <property name="text">
+               <string>保存模型训练数据结果到本地l文件（Excel）中的工作表名称：</string>
+              </property>
+              <property name="checked">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QLineEdit" name="isSaveTrainingDataToWorkingSheetNameLineEdit"/>
+            </item>
+            <item row="3" column="0">
+             <widget class="QCheckBox" name="isSaveValidationDataToWorkingSheetNameCheckBox">
+              <property name="text">
+               <string>保存模型验证数据结果到本地文件（Excel）中的工作表名称：</string>
+              </property>
+              <property name="checked">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="1">
+             <widget class="QLineEdit" name="isSaveValidationDataToWorkingSheetNameLineEdit"/>
+            </item>
+            <item row="5" column="0">
+             <widget class="QCheckBox" name="isSaveTestDataToWorkingSheetNameCheckBox">
+              <property name="text">
+               <string>保存模型测试数据结果到本地文件（Excel）中的工作表名称：</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="5" column="1">
+             <widget class="QLineEdit" name="isSaveTestDataToWorkingSheetNameLineEdit"/>
+            </item>
+            <item row="6" column="0">
+             <widget class="QCheckBox" name="isSaveNewTestDataToWorkingSheetNameCheckBox">
+              <property name="text">
+               <string>保存模型新测试数据结果到本地文件（Excel）中的工作表名称：</string>
+              </property>
+             </widget>
+            </item>
+            <item row="6" column="1">
+             <widget class="QLineEdit" name="isSaveNewTestDataToWorkingSheetNameLineEdit"/>
+            </item>
+            <item row="4" column="0">
+             <widget class="QCheckBox" name="isSaveTrainingValidationDataToWorkingSheetNameCheckBox">
+              <property name="text">
+               <string>保存模型训练-验证数据结果到本地文件（Excel）中的工作表名称：</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="1">
+             <widget class="QLineEdit" name="isSaveTrainingValidationDataToWorkingSheetNameLineEdit"/>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="Line" name="saveModelDataLine">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="saveResultDataHorizontalLayout1">
+            <item>
+             <widget class="QLabel" name="selectSaveDirectoryLabel">
+              <property name="text">
+               <string>保存路径</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="selectSaveDirectoryLineEdit"/>
+            </item>
+            <item>
+             <widget class="QPushButton" name="selectSaveDirectoryPushButton">
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="saveResultDataHorizontalLayout2">
+            <item>
+             <spacer name="saveResultDataHorizontalSpacer">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QPushButton" name="resetParameterPushButton">
+              <property name="text">
+               <string>重置参数</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="saveModelDataPushButton">
+              <property name="text">
+               <string>保存结果</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <spacer name="saveResultDataVerticalSpacer">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="bottomOperationHorizontalLayout">
+     <property name="topMargin">
+      <number>15</number>
+     </property>
+     <item>
+      <widget class="QLabel" name="operationNextStepLogoLabel">
+       <property name="text">
+        <string>TextLabel</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="operationNextStepTipLabel">
+       <property name="text">
+        <string>选择本地样本文件后，点击“下一步”以继续操作！</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="bottomOperationVerticalLayoutHorizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="previousStepPushButton">
+       <property name="text">
+        <string>上一步</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="nextStepPushButton">
+       <property name="text">
+        <string>下一步</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="cancelPushButton">
+       <property name="text">
+        <string>取消</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

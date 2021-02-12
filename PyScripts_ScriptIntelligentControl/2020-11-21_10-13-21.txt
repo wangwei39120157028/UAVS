@@ -1,0 +1,2 @@
+0    LocationGlobalRelative:lat=54.0,lon=56.0,alt=5.0
+1    LocationGlobalRelative:lat=258.0,lon=56.0,alt=51.0

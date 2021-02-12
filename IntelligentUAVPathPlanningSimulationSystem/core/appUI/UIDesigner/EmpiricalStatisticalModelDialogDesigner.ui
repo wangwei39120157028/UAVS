@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>EmpiricalStatisticalModelDialog</class>
+ <widget class="QDialog" name="EmpiricalStatisticalModelDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>796</width>
+    <height>353</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>经验统计模型</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QGroupBox" name="inSamplesGroupBox">
+     <property name="title">
+      <string>输入样本</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <property name="verticalSpacing">
+       <number>10</number>
+      </property>
+      <item row="2" column="0">
+       <widget class="QLabel" name="selectTrainingSamplesLabel">
+        <property name="text">
+         <string>训练样本：</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="10">
+       <widget class="QPushButton" name="selectTrainingSamplesPushButton">
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="selectTestSamplesLabel">
+        <property name="text">
+         <string>测试样本（可选）：</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="10">
+       <widget class="QPushButton" name="selectTestSamplesPushButton">
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="2" colspan="7">
+       <widget class="QLineEdit" name="selectTrainingSamplesLineEdit"/>
+      </item>
+      <item row="3" column="2" colspan="7">
+       <widget class="QLineEdit" name="selectTestSamplesLineEdit"/>
+      </item>
+      <item row="0" column="5">
+       <spacer name="horizontalSpacer_3">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="0" column="3">
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="sampleTypeLabel">
+        <property name="text">
+         <string>样本文件类型：</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QCheckBox" name="isIncludeRowTitleCheckBox">
+        <property name="text">
+         <string>包含行标题</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="4">
+       <widget class="QCheckBox" name="isIncludeColTitleCheckBox">
+        <property name="text">
+         <string>包含列标题</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="6">
+       <widget class="QRadioButton" name="isRowMajorRadioButton">
+        <property name="text">
+         <string>行优先</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="8">
+       <widget class="QRadioButton" name="isColMajorRadioButton">
+        <property name="text">
+         <string>列优先</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="7">
+       <spacer name="horizontalSpacer_4">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="paramsSettingGroupBox">
+     <property name="title">
+      <string>参数设置</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout" columnstretch="0,0,0,1">
+      <property name="verticalSpacing">
+       <number>10</number>
+      </property>
+      <item row="1" column="0" rowspan="4" colspan="2">
+       <widget class="QListWidget" name="unfittedEquationListWidget">
+        <item>
+         <property name="text">
+          <string>y = α * x + β</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>y = α * x ** 2 + β * x + γ</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>y = α * exp (β * x)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>y = α + β *  log(x )</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="5" column="0">
+       <widget class="QLabel" name="customEquationLabel">
+        <property name="text">
+         <string>自定义方程：</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="1">
+       <widget class="QLineEdit" name="customEquationLineEdit"/>
+      </item>
+      <item row="0" column="0" colspan="2">
+       <widget class="QLabel" name="unfittedEquationLabel">
+        <property name="text">
+         <string>未拟合方程：</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="2">
+       <widget class="QPushButton" name="addEquationPushButton">
+        <property name="maximumSize">
+         <size>
+          <width>35</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>&gt;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="2">
+       <widget class="QPushButton" name="delEquationPushButton">
+        <property name="maximumSize">
+         <size>
+          <width>35</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>&lt;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3" rowspan="5">
+       <widget class="QTableWidget" name="fittedEquationTableWidget">
+        <property name="selectionBehavior">
+         <enum>QAbstractItemView::SelectRows</enum>
+        </property>
+        <property name="rowCount">
+         <number>10</number>
+        </property>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <column>
+         <property name="text">
+          <string>待拟合方程</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>初始化参数</string>
+         </property>
+        </column>
+        <item row="0" column="0">
+         <property name="text">
+          <string>y = α * x + β</string>
+         </property>
+        </item>
+        <item row="0" column="1">
+         <property name="text">
+          <string>10,10</string>
+         </property>
+        </item>
+        <item row="1" column="0">
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item row="1" column="1">
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <property name="topMargin">
+      <number>10</number>
+     </property>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="trainingTestPushButton">
+       <property name="text">
+        <string>训练/测试</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="cancelPushButton">
+       <property name="text">
+        <string>取消</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

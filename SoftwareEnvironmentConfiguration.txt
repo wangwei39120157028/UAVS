@@ -1,0 +1,10 @@
+FlightGear-2018.2.2
+gcc-arm-none-eabi-6-2017-q2-update-win32-sha2
+MAVProxySetup-latest
+MissionPlanner-latest
+setup-x86_64（Cygwin）
+这是《软件环境》内的安装包，必须首先安装，其他详见《智能无人机路径规划仿真系统_使用说明书》
+百度网盘链接：https://pan.baidu.com/s/1dBIDc5FwI0xtw_yLlb3Siw   提取码：d7bc
+
+以及Python运行环境：
+百度网盘链接：https://pan.baidu.com/s/1YMidaCKLpsvem6twfpxaZQ   提取码：eohb 

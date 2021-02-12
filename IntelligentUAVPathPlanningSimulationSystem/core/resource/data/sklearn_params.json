@@ -1,0 +1,1092 @@
+{
+    "description":"",
+    
+    "ClassificationEstimator":{
+        "逻辑回归": "LogisticRegression",
+        "支持向量分类": "SVC",
+        "多层感知器分类": "MLPClassifier",
+        "决策树分类": "DecisionTreeClassifier",
+        "随机森林分类": "RandomForestClassifier",
+        "梯度提升树分类": "GradientBoostingClassifier"
+    },
+
+    "ClusterEstimator":{
+        "K-Means聚类": "KMeans"
+    },
+
+    "RegressionEstimator":{
+        "线性回归":"LinearRegression",
+        "岭回归": "Ridge",
+        "套索回归": "Lasso",
+        "支持向量回归": "SVR",
+        "多层感知器回归": "MLPRegressor",
+        "决策树回归": "DecisionTreeRegressor",
+        "随机森林回归": "RandomForestRegressor",
+        "梯度提升树回归": "GradientBoostingRegressor"
+    },
+
+    "LogisticRegression":{
+        "name":"逻辑回归",
+        "parameters":{
+            "default parameters":{
+                "description":"full",
+                "penalty":{
+                    "name":"正则化",
+                    "value":"l2",
+                    "type":["string"]
+                },
+                "C":{
+                    "name":"正则化强度",
+                    "value":1.0,
+                    "type":["float", "list"]
+                },
+                "solver":{
+                    "name":"优化算法",
+                    "value":"liblinear",
+                    "type":["string"]
+                },
+                "max_iter":{
+                    "name":"迭代次数",
+                    "value":100,
+                    "type":["int"]
+                },
+                "multi_class":{
+                    "name":"多分类方式",
+                    "value":"ovr",
+                    "type":["string"]
+                }    
+            },
+            "tuning parameters":{
+                "description":"full",
+                "penalty":{
+                    "name":"正则化",
+                    "value":["l1", "l2", "elasticnet", "none"],
+                    "type":["string"]
+                },
+                "C":{
+                    "name":"正则化强度",
+                    "value":[1.0, 2.0, 10.0],
+                    "type":["float", "list"]
+                },
+                "solver":{
+                    "name":"优化算法",
+                    "value":["liblinear"],
+                    "type":["string"]
+                },
+                "max_iter":{
+                    "name":"迭代次数",
+                    "value":[50, 100, 500],
+                    "type":["int"]
+                },
+                "multi_class":{
+                    "name":"多分类方式",
+                    "value":["ovr", "multinomial", "auto"],
+                    "type":["string"]
+                }    
+            }
+        }
+    },
+    
+    "SVC":{
+        "name":"支持向量分类",
+        "parameters":{
+            "default parameters":{
+                "description":"full",
+                "kernel":{
+                    "name":"核函数",
+                    "value":"rbf",
+                    "type":["string"]
+                },
+                "degree":{
+                    "name":"核函数阶数",
+                    "value":3, 
+                    "type":["int"]
+                },
+                "gamma":{
+                    "name":"核函数系数",
+                    "value":"auto",
+                    "type":["string"]
+                },
+                "coef0":{
+                    "name":"核函数常数项",
+                    "value":0.0,
+                    "type":["float"]
+                },
+                "tol":{
+                    "name":"容忍停止标准",
+                    "value":1e-3,
+                    "type":["float"]
+                },
+                "C":{
+                    "name":"误差项惩罚系数",
+                    "value":1.0,
+                    "type":["int"]
+                },
+                "max_iter":{
+                    "name":"迭代次数",
+                    "value":-1,
+                    "type":["int"]
+                }
+            },
+            "tuning parameters":{
+                "description":"full",
+                "kernel":{
+                    "name":"核函数",
+                    "value":["linear", "poly", "rbf", "sigmoid"],
+                    "type":["string"]
+                },
+                "degree":{
+                    "name":"核函数阶数",
+                    "value":[3, 7, 10], 
+                    "type":["int"]
+                },
+                "gamma":{
+                    "name":"核函数系数",
+                    "value":["scale", "auto"],
+                    "type":["string"]
+                },
+                "coef0":{
+                    "name":"核函数常数项",
+                    "value":[0.0, 0.05, 0.1, 0.9],
+                    "type":["float"]
+                },
+                "tol":{
+                    "name":"容忍停止标准",
+                    "value":[1e-3, 1e-2],
+                    "type":["float"]
+                },
+                "C":{
+                    "name":"误差项惩罚系数",
+                    "value":[1.0, 2.0, 10.0],
+                    "type":["int"]
+                },
+                "max_iter":{
+                    "name":"迭代次数",
+                    "value":[-1],
+                    "type":["int"]
+                }
+            }
+        }
+    },
+
+    "MLPClassifier":{
+        "name":"多层感知器分类",
+        "parameters":{
+            "default parameters":{
+                "description":"full",
+                "hidden_layer_sizes":{
+                    "name":"网络结构",
+                    "value":100,
+                    "type":["tuple"]
+                },
+                "activation":{
+                    "name":"激活函数",
+                    "value":"relu",
+                    "type":["string"]
+                },
+                "solver":{
+                    "name":"优化算法",
+                    "value":"adam",
+                    "type":["string"]
+                },
+                "alpha":{
+                    "name":"L2惩罚项系数",
+                    "value":1e-4,
+                    "type":["float"]
+                },
+                "batch_size":{
+                    "name":"批次大小",
+                    "value":["auto"],
+                    "type":["int", "string"]
+                },
+                "max_iter":{
+                    "name":"最大迭代次数",
+                    "value":200,
+                    "type":["double"]
+                },
+                "learning_rate_init":{
+                    "name":"初始学习率",
+                    "value":0.001,
+                    "type":["double"]
+                }
+            },
+            "tuning parameters":{
+                "description":"full",
+                "hidden_layer_sizes":{
+                    "name":"网络结构",
+                    "value":[100, 10],
+                    "type":["tuple"]
+                },
+                "activation":{
+                    "name":"激活函数",
+                    "value":["identity", "logistic", "tanh", "relu"],
+                    "type":["string"]
+                },
+                "solver":{
+                    "name":"优化算法",
+                    "value":["lbfgs", "sgd"],
+                    "type":["string"]
+                },
+                "alpha":{
+                    "name":"L2惩罚项系数",
+                    "value":[1e-4, 5e-3],
+                    "type":["float"]
+                },
+                "batch_size":{
+                    "name":"批次大小",
+                    "value":["auto"],
+                    "type":["int", "string"]
+                },
+                "max_iter":{
+                    "name":"最大迭代次数",
+                    "value":[5, 20, 50, 100],
+                    "type":["double"]
+                },
+                "learning_rate_init":{
+                    "name":"初始学习率",
+                    "value":[0.001, 0.0001],
+                    "type":["double"]
+                }
+            }
+        }
+    },
+
+    "DecisionTreeClassifier":{
+        "name":"决策树分类",
+        "parameters":{
+            "default parameters":{
+                "description":"full",
+                "criterion":{
+                    "name":"节点分裂放方式",
+                    "value":"gini",
+                    "type":["string"]
+                },
+                "splitter":{
+                    "name":"分裂节点选择策略",
+                    "value":"best",
+                    "type":["string"]
+                },
+                "max_depth":{
+                    "name":"最大深度",
+                    "value":"None",
+                    "type":["int", "None"]
+                },
+                "max_features":{
+                    "name":"节点分裂最大特征数",
+                    "value":"None",
+                    "type":["string"]
+                },
+                "min_samples_split":{
+                    "name":"节点分裂最小样本数",
+                    "value":2,
+                    "type":["int", "float"]
+                },
+                "min_samples_leaf":{
+                    "name":"叶子节点最小样本数",
+                    "value":1,
+                    "type":["int", "float"]
+                }
+            },
+            "tuning parameters":{
+                "description":"full",
+                "criterion":{
+                    "name":"节点分裂放方式",
+                    "value":["gini", "entropy"],
+                    "type":["string"]
+                },
+                "splitter":{
+                    "name":"分裂节点选择策略",
+                    "value":["best", "random"],
+                    "type":["string"]
+                },
+                "max_depth":{
+                    "name":"最大深度",
+                    "value":["None", 2, 3, 50, 100, 500],
+                    "type":["int", "None"]
+                },
+                "max_features":{
+                    "name":"节点分裂最大特征数",
+                    "value":["None"], 
+                    "type":["double"]
+                },
+                "min_samples_split":{
+                    "name":"节点分裂最小样本数",
+                    "value":[2, 5, 10],
+                    "type":["int", "float"]
+                },
+                "min_samples_leaf":{
+                    "name":"叶子节点最小样本数",
+                    "value":[1, 5, 10],
+                    "type":["int", "float"]
+                }
+            }
+        }
+    },
+
+    "RandomForestClassifier":{
+        "name":"随机森林分类",
+        "parameters":{
+            "default parameters":{
+                "description":"full",
+                "n_estimators ":{
+                    "name":"决策树数目",
+                    "value":100,
+                    "type":["int"]
+                },
+                "max_depth":{
+                    "name":"最大深度",
+                    "value":"None",
+                    "type":["int", "None"]
+                },
+                "criterion":{
+                    "name":"叶节点分裂规则",
+                    "value":"gini",
+                    "type":["string"]
+                },
+                "max_features":{
+                    "name":"节点分裂最大特征数",
+                    "value":"auto",
+                    "type":["string", "int"]
+                },
+                "min_samples_split":{
+                    "name":"节点分裂最小样本数",
+                    "value":2,
+                    "type":["int"]
+                },
+                "min_samples_leaf":{
+                    "name":"叶子节点最小样本数",
+                    "value":1,
+                    "type":["int"]
+                },
+                "bootstrap":{
+                    "name":"自助重采样",
+                    "value":"True",
+                    "type":["bool"]
+                },
+                "oob_score":{
+                    "name":"计算袋外得分",
+                    "value":"False",
+                    "type":["bool"]
+                }
+            },
+            "tuning parameters":{
+                "description":"full",
+                "n_estimators":{
+                    "name":"决策树数目",
+                    "value":[5, 50, 100, 500],
+                    "type":["int"]
+                },
+                "max_depth":{
+                    "name":"最大深度",
+                    "value":["None", 2, 3, 50, 100, 500],
+                    "type":["int", "None"]
+                },
+                "criterion":{
+                    "name":"叶节点分裂规则",
+                    "value":["gini", "entropy"],
+                    "type":["string"]
+                },
+                "max_features":{
+                    "name":"节点分裂最大特征数",
+                    "value":["None"], 
+                    "type":["double"]
+                },
+                "min_samples_split":{
+                    "name":"节点分裂最小样本数",
+                    "value":[2, 5, 10],
+                    "type":["int", "float"]
+                },
+                "min_samples_leaf":{
+                    "name":"叶子节点最小样本数",
+                    "value":[1, 5, 10],
+                    "type":["int", "float"]
+                }
+            }
+        }
+    },
+
+    "GradientBoostingClassifier":{
+        "name":"梯度提升树分类",
+        "parameters":{
+            "default parameters":{
+                "description":"full",
+                "n_estimators ":{
+                    "name":"提升树数目",
+                    "value":100,
+                    "type":["int"]
+                },
+                "loss":{
+                    "name":"损失函数",
+                    "value":"deviance",
+                    "type":["string"]
+                },
+                "learning_rate":{
+                    "name":"学习率",
+                    "value":0.1,
+                    "type":["float"]
+                },
+                "max_depth":{
+                    "name":"最大深度",
+                    "value":3,
+                    "type":["int"]
+                },
+                "criterion":{
+                    "name":"叶节点分裂规则",
+                    "value":"friedman_mse",
+                    "type":["string"]
+                },
+                "max_features":{
+                    "name":"节点分裂最大特征数",
+                    "value":"None",
+                    "type":["double"]
+                },
+                "min_samples_split":{
+                    "name":"节点分裂最小样本数",
+                    "value":2,
+                    "type":["int", "float"]
+                },
+                "min_samples_leaf":{
+                    "name":"叶子节点最小样本数",
+                    "value":1,
+                    "type":["int"]
+                },
+                "tol":{
+                    "name":"误差下限",
+                    "value":1e-4,
+                    "type":["float"]
+                }
+            },
+            "tuning parameters":{
+                "description":"full",
+                "n_estimators":{
+                    "name":"提升树数目",
+                    "value":[5, 50, 100, 500],
+                    "type":["int"]
+                },
+                "loss":{
+                    "name":"损失函数",
+                    "value":["deviance"],
+                    "type":["string"]
+                },
+                "learning_rate":{
+                    "name":"学习率",
+                    "value":[0.1, 0.005, 0.0001],
+                    "type":["float"]
+                },
+                "max_depth":{
+                    "name":"最大深度",
+                    "value":["None", 2, 3, 50, 100],
+                    "type":["int"]
+                },
+                "criterion":{
+                    "name":"叶节点分裂规则",
+                    "value":["mse", "friedman_mse"],
+                    "type":["string"]
+                },
+                "max_features":{
+                    "name":"节点分裂最大特征数",
+                    "value":["None"], 
+                    "type":["double"]
+                },
+                "min_samples_split":{
+                    "name":"节点分裂最小样本数",
+                    "value":[2, 5, 10],
+                    "type":["int", "float"]
+                },
+                "min_samples_leaf":{
+                    "name":"叶子节点最小样本数",
+                    "value":[1, 5, 10],
+                    "type":["int", "float"]
+                },
+                "tol":{
+                    "name":"误差下限",
+                    "value":[1e-4, 1e-3],
+                    "type":["float"]
+                }
+            }
+        }
+    },
+
+    "KMeans":{
+        "name":"K-Means聚类",
+        "parameters":{
+            "default parameters":{
+                "description":"full",
+                "n_clusters":{
+                    "name":"聚类数",
+                    "value":8,
+                    "type":["int"]
+                },
+                "init":{
+                    "name":"参数初始化算法",
+                    "value":"k-means++",
+                    "type":["string"]
+                },
+                "n_init":{
+                    "name":"质心初始化次数",
+                    "value":10,
+                    "type":["float"]
+                },
+                "max_iter":{
+                    "name":"迭代次数",
+                    "value":300,
+                    "type":["int"]
+                },
+                "algorithm":{
+                    "name":"k-Means算法",
+                    "value":"auto",
+                    "type":["double"]
+                },
+                "tol":{
+                    "name":"误差下限",
+                    "value":1e-4,
+                    "type":["float"]
+                }
+            },
+            "tuning parameters":{
+                "description":"full",
+                "init":{
+                    "name":"参数初始化算法",
+                    "value":["k-means++"],
+                    "type":["string"]
+                },
+                "n_init":{
+                    "name":"质心初始化次数",
+                    "value":[3, 10, 20, 50],
+                    "type":["float"]
+                },
+                "max_iter":{
+                    "name":"迭代次数",
+                    "value":[100, 300, 500, 1000],
+                    "type":["int"]
+                },
+                "algorithm":{
+                    "name":"k-Means算法",
+                    "value":["auto", "full", "elkan"],
+                    "type":["double"]
+                },
+                "tol":{
+                    "name":"误差下限",
+                    "value":[1e-4, 1e-3, 1e-2],
+                    "type":["float"]
+                }
+            }
+        }
+    },
+
+    "LinearRegression":{
+        "name":"线性回归",
+        "parameters":{
+            "default parameters":{
+                "description":"null"
+            },
+            "tuning parameters":{
+                "description":"null"
+            }
+        }
+    },
+
+    "Ridge":{
+        "name":"岭回归",
+        "parameters":{
+            "default parameters":{
+                "description":"full",
+                "alpha":{
+                    "name":"正则化强度",
+                    "value":1.0,
+                    "type":["float", "list"]
+                },
+                "max_iter":{
+                    "name":"最大迭代次数",
+                    "value":"None",
+                    "type":["None", "int"]
+                }
+            },
+            "tuning parameters":{
+                "description":"full",
+                "alpha":{
+                    "name":"正则化强度",
+                    "value":[1.0, 2.0, 5.0],
+                    "type":["float", "list"]
+                },
+                "max_iter":{
+                    "name":"最大迭代次数",
+                    "value":[10, 50, 100, 500, 1000],
+                    "type":["None","int"]
+                }
+            }
+        }
+    },
+
+    "Lasso":{
+        "name":"套索回归",
+        "parameters":{
+            "default parameters":{
+                "description":"full",
+                "alpha":{
+                    "name":"正则化强度",
+                    "value":1.0,
+                    "type":["float", "list"]
+                },
+                "max_iter":{
+                    "name":"最大迭代次数",
+                    "value":"None",
+                    "type":["None", "int"]
+                },
+                "tol":{
+                    "name":"优化下限",
+                    "value":1e-4,
+                    "type":["float"]
+                }
+            },
+            "tuning parameters":{
+                "description":"full",
+                "alpha":{
+                    "name":"正则化强度",
+                    "value":[1.0, 2.0, 5.0, 10.0],
+                    "type":["float", "list"]
+                },
+                "max_iter":{
+                    "name":"最大迭代次数",
+                    "value":[10, 50, 100, 200, 500, 1000],
+                    "type":["None", "int"]
+                },
+                "tol":{
+                    "name":"优化下限",
+                    "value":[1e-4, 5e-3, 1e-3, 5e-2, 1e-2],
+                    "type":["float"]
+                }
+            }
+        }
+    },
+
+    "SVR":{
+        "name":"支持向量回归",
+        "parameters":{
+            "default parameters":{
+                "description":"full",
+                "kernel":{
+                    "name":"核函数",
+                    "value":"rbf",
+                    "type":["string"]
+                },
+                "degree":{
+                    "name":"核函数阶数",
+                    "value":3,
+                    "type":["int"]
+                },
+                "gamma":{
+                    "name":"核函数系数",
+                    "value":"auto",
+                    "type":["string"]
+                },
+                "coef0":{
+                    "name":"核函数常数项",
+                    "value":0.0,
+                    "type":["float"]
+                },
+                "tol":{
+                    "name":"容忍停止标准",
+                    "value":1e-3,
+                    "type":["float"]
+                },
+                "C":{
+                    "name":"误差项惩罚系数",
+                    "value":1.0,
+                    "type":["int"]
+                },
+                "epsilon":{
+                    "name":"epsilon",
+                    "value":0.1,
+                    "type":["float"]
+                },
+                "max_iter":{
+                    "name":"迭代次数",
+                    "value":-1,
+                    "type":["int"]
+                }
+            },
+            "tuning parameters":{
+                "description":"full",
+                "kernel":{
+                    "name":"核函数",
+                    "value":["linear", "poly", "rbf", "sigmoid"],
+                    "type":["string"]
+                },
+                "degree":{
+                    "name":"核函数阶数",
+                    "value":[3, 7, 10], 
+                    "type":["int"]
+                },
+                "gamma":{
+                    "name":"核函数系数",
+                    "value":["scale", "auto"],
+                    "type":["string"]
+                },
+                "coef0":{
+                    "name":"核函数常数项",
+                    "value":[0.0, 0.05, 0.1, 0.9],
+                    "type":["float"]
+                },
+                "tol":{
+                    "name":"容忍停止标准",
+                    "value":[1e-3, 1e-2],
+                    "type":["float"]
+                },
+                "C":{
+                    "name":"误差项惩罚系数",
+                    "value":[1.0, 2.0, 10.0],
+                    "type":["int"]
+                },
+                "epsilon":{
+                    "name":"epsilon",
+                    "value":[0.1, 0.2, 0.8],
+                    "type":["float"]
+                },
+                "max_iter":{
+                    "name":"迭代次数",
+                    "value":[-1],
+                    "type":["int"]
+                }
+            }
+        }
+    },
+
+    "MLPRegressor":{
+        "name":"多层感知器回归",
+        "parameters":{
+            "default parameters":{
+                "description":"full",
+                "hidden_layer_sizes":{
+                    "name":"网络结构",
+                    "value":100,
+                    "type":["tuple"]
+                },
+                "activation":{
+                    "name":"激活函数",
+                    "value":"relu",
+                    "type":["string"]
+                },
+                "solver":{
+                    "name":"优化算法",
+                    "value":"adam",
+                    "type":["string"]
+                },
+                "alpha":{
+                    "name":"L2惩罚项系数",
+                    "value":1e-4,
+                    "type":["float"]
+                },
+                "batch_size":{
+                    "name":"批次大小",
+                    "value":"auto",
+                    "type":["int", "string"]
+                },
+                "max_iter":{
+                    "name":"最大迭代次数",
+                    "value":200,
+                    "type":["double"]
+                },
+                "learning_rate_init":{
+                    "name":"初始学习率",
+                    "value":0.001,
+                    "type":["double"]
+                }
+            },
+            "tuning parameters":{
+                "description":"full",
+                "hidden_layer_sizes":{
+                    "name":"网络结构",
+                    "value":[[3],[5],[5,5],[10, 10],[15,15],[100,100]],
+                    "type":["tuple"]
+                },
+                "activation":{
+                    "name":"激活函数",
+                    "value":["logistic", "tanh", "relu"],
+                    "type":["string"]
+                },
+                "solver":{
+                    "name":"优化算法",
+                    "value":["lbfgs", "sgd"],
+                    "type":["string"]
+                },
+                "alpha":{
+                    "name":"L2惩罚项系数",
+                    "value":[1e-3, 3e-3, 5e-3, 7e-3, 8e-3],
+                    "type":["float"]
+                },
+                "batch_size":{
+                    "name":"批次大小",
+                    "value":["auto"],
+                    "type":["int", "string"]
+                },
+                "max_iter":{
+                    "name":"最大迭代次数",
+                    "value":[-1],
+                    "type":["double"]
+                },
+                "learning_rate_init":{
+                    "name":"初始学习率",
+                    "value":[0.01, 0.001, 0.0001],
+                    "type":["double"]
+                }
+            }
+        }
+    },
+
+    "DecisionTreeRegressor":{
+        "name":"决策树回归",
+        "parameters":{
+            "default parameters":{
+                "description":"full",
+                "criterion":{
+                    "name":"节点分裂放方式",
+                    "value":"mse",
+                    "type":["string"]
+                },
+                "splitter":{
+                    "name":"分裂节点选择策略",
+                    "value":"best",
+                    "type":["string"]
+                },
+                "max_depth":{
+                    "name":"最大深度",
+                    "value":"None",
+                    "type":["int", "None"]
+                },
+                "max_features":{
+                    "name":"节点分裂最大特征数",
+                    "value":"None",
+                    "type":["double"]
+                },
+                "min_samples_split":{
+                    "name":"节点分裂最小样本数",
+                    "value":2,
+                    "type":["int", "float"]
+                },
+                "min_samples_leaf":{
+                    "name":"叶子节点最小样本数",
+                    "value":1,
+                    "type":["int", "float"]
+                }
+            },
+            "tuning parameters":{
+                "description":"full",
+                "criterion":{
+                    "name":"节点分裂放方式",
+                    "value":["mse", "friedman_mse", "mae"],
+                    "type":["string"]
+                },
+                "splitter":{
+                    "name":"分裂节点选择策略",
+                    "value":["best", "random"],
+                    "type":["string"]
+                },
+                "max_depth":{
+                    "name":"最大深度",
+                    "value":["None", 2, 3, 50, 100, 500],
+                    "type":["int", "None"]
+                },
+                "max_features":{
+                    "name":"节点分裂最大特征数",
+                    "value":["None"], 
+                    "type":["double"]
+                },
+                "min_samples_split":{
+                    "name":"节点分裂最小样本数",
+                    "value":[2, 5, 10],
+                    "type":["int", "float"]
+                },
+                "min_samples_leaf":{
+                    "name":"叶子节点最小样本数",
+                    "value":[1, 5, 10],
+                    "type":["int", "float"]
+                }
+            }
+        }
+    },
+
+    "RandomForestRegressor":{
+        "name":"随机森林回归",
+        "parameters":{
+            "default parameters":{
+                "description":"full",
+                "n_estimators ":{
+                    "name":"决策树数目",
+                    "value":100,
+                    "type":["int"]
+                },
+                "max_depth":{
+                    "name":"最大深度",
+                    "value":"None",
+                    "type":["int", "None"]
+                },
+                "criterion":{
+                    "name":"叶节点分裂规则",
+                    "value":"mse",
+                    "type":["string"]
+                },
+                "max_features":{
+                    "name":"节点分裂最大特征数",
+                    "value":"auto",
+                    "type":["string", "int"]
+                },
+                "min_samples_split":{
+                    "name":"节点分裂最小样本数",
+                    "value":2,
+                    "type":["int"]
+                },
+                "min_samples_leaf":{
+                    "name":"叶子节点最小样本数",
+                    "value":1,
+                    "type":["int"]
+                },
+                "bootstrap":{
+                    "name":"自助重采样",
+                    "value":"True",
+                    "type":["bool"]
+                },
+                "oob_score":{
+                    "name":"计算袋外得分",
+                    "value":"False",
+                    "type":["bool"]
+                }
+            },
+            "tuning parameters":{
+                "description":"full",
+                "n_estimators":{
+                    "name":"决策树数目",
+                    "value":[50, 100, 500, 1000, 2000],
+                    "type":["int"]
+                },
+                "max_depth":{
+                    "name":"最大深度",
+                    "value":["None"],
+                    "type":["int", "None"]
+                },
+                "criterion":{
+                    "name":"叶节点分裂规则",
+                    "value":["mse"],
+                    "type":["string"]
+                },
+                "max_features":{
+                    "name":"节点分裂最大特征数",
+                    "value":["None"], 
+                    "type":["double"]
+                },
+                "min_samples_split":{
+                    "name":"节点分裂最小样本数",
+                    "value":[2],
+                    "type":["int", "float"]
+                },
+                "min_samples_leaf":{
+                    "name":"叶子节点最小样本数",
+                    "value":[1],
+                    "type":["int", "float"]
+                }
+            }
+        }
+    },
+
+    "GradientBoostingRegressor":{
+        "name":"梯度提升树回归",
+        "parameters":{
+            "default parameters":{
+                "description":"full",
+                "n_estimators ":{
+                    "name":"提升树数目",
+                    "value":100,
+                    "type":["int"]
+                },
+                "loss":{
+                    "name":"损失函数",
+                    "value":"ls",
+                    "type":["string"]
+                },
+                "learning_rate":{
+                    "name":"学习率",
+                    "value":0.1,
+                    "type":["float"]
+                },
+                "max_depth":{
+                    "name":"最大深度",
+                    "value":3,
+                    "type":["int"]
+                },
+                "criterion":{
+                    "name":"叶节点分裂规则",
+                    "value":"friedman_mse",
+                    "type":["string"]
+                },
+                "max_features":{
+                    "name":"节点分裂最大特征数",
+                    "value":"None",
+                    "type":["double"]
+                },
+                "min_samples_split":{
+                    "name":"节点分裂最小样本数",
+                    "value":2,
+                    "type":["int", "float"]
+                },
+                "min_samples_leaf":{
+                    "name":"叶子节点最小样本数",
+                    "value":1,
+                    "type":["int"]
+                },
+                "tol":{
+                    "name":"误差下限",
+                    "value":1e-4,
+                    "type":["float"]
+                }
+            },
+            "tuning parameters":{
+                "description":"full",
+                "n_estimators":{
+                    "name":"提升树数目",
+                    "value":[5, 50, 100, 500],
+                    "type":["int"]
+                },
+                "loss":{
+                    "name":"损失函数",
+                    "value":["ls", "lad"],
+                    "type":["string"]
+                },
+                "learning_rate":{
+                    "name":"学习率",
+                    "value":[0.1, 0.005, 0.0001],
+                    "type":["float"]
+                },
+                "max_depth":{
+                    "name":"最大深度",
+                    "value":["None", 2, 3, 50, 100],
+                    "type":["int"]
+                },
+                "criterion":{
+                    "name":"叶节点分裂规则",
+                    "value":["mse", "friedman_mse"],
+                    "type":["string"]
+                },
+                "max_features":{
+                    "name":"节点分裂最大特征数",
+                    "value":["None"], 
+                    "type":["double"]
+                },
+                "min_samples_split":{
+                    "name":"节点分裂最小样本数",
+                    "value":[2, 5, 10],
+                    "type":["int", "float"]
+                },
+                "min_samples_leaf":{
+                    "name":"叶子节点最小样本数",
+                    "value":[1, 5, 10],
+                    "type":["int", "float"]
+                },
+                "tol":{
+                    "name":"误差下限",
+                    "value":[1e-4, 1e-3],
+                    "type":["float"]
+                }
+            }
+        }
+    }
+}
