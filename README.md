@@ -2,35 +2,36 @@
 Drone  Intelligent UAV path planning simulation system is a software with fine operation control, strong platform integration, omnidirectional model building and application automation. It takes the UAV war between A and B in Zone C as the background. The core function of the system is to plan the UAV route through the simulation platform and verify the output. The data can be imported into the real UAV to make it accurately arrive at any position in the battlefield according to the specified route and support the joint action of multi-person and multi-device formation.
 ### [Video Introduction](https://www.yuque.com/u12074055/kb/qqkaw9)
 ## Main Features
-![Intelligent UAV path planning simulation system](https://images.gitee.com/uploads/images/2021/0125/233607_f09b2d25_2323666.jpeg "13.jpg")<br>
+![Intelligent UAV path planning simulation system]
+![1](https://user-images.githubusercontent.com/39434325/110713243-8d960580-823c-11eb-9caf-3b7a572d9732.jpeg)<br>
 System supported by open source SITL uav simulation platform, through FlightGear rendering real battlefield environment, integrated modeling, 2 d vertical, three-dimensional dynamic model simulation, script control, ground station monitoring, data processing, and other functions, in addition, the simulation system supports a variety of global map load, simulate the key region of the three dimensional environment, can be used throughout the global remote sensing monitoring in the scene.
 ### 1. Software Interface
-![Software Interface](https://images.gitee.com/uploads/images/2021/0125/233744_ba69880f_2323666.png "1.png")
+![2](https://user-images.githubusercontent.com/39434325/110713299-a69eb680-823c-11eb-8689-3b634a2a5f91.png)
 ### 2. Software Architecture (plug-ins to be implemented for some extended functions)
-![Software Architecture](https://images.gitee.com/uploads/images/2021/0125/233759_e596a868_2323666.png "2.png")
+![3](https://user-images.githubusercontent.com/39434325/110713307-ab636a80-823c-11eb-93a0-fc7b6c8434c9.png)
 ### 3. Code
-![The code](https://images.gitee.com/uploads/images/2021/0125/233814_c0aa0ba5_2323666.png "3.png")
+![4](https://user-images.githubusercontent.com/39434325/110713325-b4543c00-823c-11eb-8535-9cbf0aabecc6.png)
 ### 4. Multidimensional View
 #### Two-dimensional view (1)
-![Two-dimensional view (1)](https://images.gitee.com/uploads/images/2021/0125/233838_febcde95_2323666.png "4.png")
+![5](https://user-images.githubusercontent.com/39434325/110713334-b9b18680-823c-11eb-95c8-d9ace97e9842.png)
 #### Two-dimensional view (2)
-![Two-dimensional view (2)](https://images.gitee.com/uploads/images/2021/0125/233900_9a21536c_2323666.png "5.png")
+![6](https://user-images.githubusercontent.com/39434325/110713350-c209c180-823c-11eb-8284-167268a5533a.png)
 #### 3d view
-![3d view](https://images.gitee.com/uploads/images/2021/0125/233925_c9f2e081_2323666.png "6.png")
+![7](https://user-images.githubusercontent.com/39434325/110713362-c7ffa280-823c-11eb-9d30-d08ae469522f.png)
 ### 5. UAV Control
 #### Console Control
-![ Console Control](https://images.gitee.com/uploads/images/2021/0125/233942_e93cbff8_2323666.png "7.png")
+![8](https://user-images.githubusercontent.com/39434325/110713375-cdf58380-823c-11eb-8efd-367f4535d42b.png)
 #### Intelligent Control
-![Intelligent Control](https://images.gitee.com/uploads/images/2021/0126/181402_cd1f8329_2323666.png "改git.png")
+![9](https://user-images.githubusercontent.com/39434325/110713391-d2ba3780-823c-11eb-882f-a82430b8bc42.png)
 #### Ground Station Control
-![Ground Station Control](https://images.gitee.com/uploads/images/2021/0125/234015_bc90af97_2323666.png "9.png")
+![10](https://user-images.githubusercontent.com/39434325/110713407-da79dc00-823c-11eb-9c8d-5cd2208a6c87.png)
 ### 6. Set Flight Mission
 #### Flight Mission(1)
-![Flight Mission(1)）](https://images.gitee.com/uploads/images/2021/0125/234038_f5448a7f_2323666.png "10.png")
+![11](https://user-images.githubusercontent.com/39434325/110713425-e1a0ea00-823c-11eb-8beb-1d9d7f52724a.png)
 #### Flight Mission(2)
-![Flight Mission(2)](https://images.gitee.com/uploads/images/2021/0125/234057_37ff1cc1_2323666.png "11.png")
+![12](https://user-images.githubusercontent.com/39434325/110713442-e9608e80-823c-11eb-86df-85b19b823738.png)
 #### Flight Mission(3)
-![Flight Mission(3)](https://images.gitee.com/uploads/images/2021/0125/234121_a8022c2e_2323666.png "12.png")
+![13](https://user-images.githubusercontent.com/39434325/110713570-1b71f080-823d-11eb-97da-6651e9a00d60.png)
 ## Solve The Problem
 
 Intelligent UAV path planning simulation system solves the problem that ordinary UAV can not accurately plan the path, and ordinary UAV is not enough support, inconvenient to control, difficult to use in the actual war. This software can be designed for flight mission routes in advance, using a flight simulator unmanned aerial vehicle (uav) in the real-time state of mission, through strengthening unmanned aerial vehicle (uav) in the system against ground station module control, simulation of the unmanned aerial vehicle (uav) group of joint action tactical fighting, sailing and output data for the use of real unmanned aerial vehicle (uav), the uav size short, quick release, huge resource advantage as far as possible.
