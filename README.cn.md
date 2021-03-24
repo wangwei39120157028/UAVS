@@ -44,9 +44,29 @@ Drone智能无人机路径规划仿真系统是一个具有操作控制精细、
 使用该软件的优点是吸收国外已获得成果，将运行环境从Linux系统重新编译移植到Windows等其他操作系统，除仿真三维环境模块外均使用Python语言编写，程序易维护、易修改。通过Pyqt5编写的软件界面集成了软件各个模块，加入后台提示功能，设计智能控制脚本简化系统使用流程，联动FlightGear模拟器、MissionPlanner地面站程序进行可视化，以提高真实无人机飞行路径精准度、指定飞行计划为根本目的。
 
 ## 四、扩展<br>
+### 关于多无人机的编队模拟
 windows下使用 SITL 模拟多无人机编队请参照下面文章，注意路径要在ArduCopter/下执行测试命令：
 https://blog.csdn.net/jzhd2015/article/details/108987818
+
+### 关于flylitchi下的航线飞行
+在油管上偶然看到，通过Mission Planner地面站规划航线,保存航点后，用Excel对其进行编辑，在通过网页端Litchi导入修改后的CSV格式的数据，进而实现大疆无人机在Litchi APP上按照航线飞行。
+1.网页版可在flylitchi官网直接编辑（国外网站-需要跳板）：https://flylitchi.com/hub
+使用方法十分简单，可见《好知》教程：http://www.howzhi.com/course/13669/lesson/84384
+
+2.安卓手机Litchi 4.7 APP编辑（吾爱破解下载地址）：https://www.52pojie.cn/thread-834234-1-1.html
+百度网盘链接: https://pan.baidu.com/s/14qzvBuRIYhr_LhL7BRjd4Q 提取码: w5eu
+内置的双地图 不用下载谷歌应用 让你的御AIR也有航点功能
+Android：Litchi for DJI Mavic / Phantom / Inspire / Spark版本4.7.0
+- 全景模式速度和可靠性改进
+- 全景模式设置改进
+- 修复了在某些设备上更改应用程序语言失败的错误
+
+### Mission planner + Google Earth 日志生成3D轨迹图
+仍需跳板，这里使用谷歌中国卫星地图代替，主要是导入.waypoint或kmz文件为主
+![1111](https://user-images.githubusercontent.com/39434325/112245151-4facce80-8c8b-11eb-9ac9-706a7bb78bc5.PNG)
+
 其他扩展插件请等待更新....
+
 
 ## 五、感谢<br>
 **CSDN：**<br>
