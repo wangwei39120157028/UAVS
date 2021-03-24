@@ -54,7 +54,7 @@ https://blog.csdn.net/jzhd2015/article/details/108987818
 使用方法十分简单，可见《好知》教程：http://www.howzhi.com/course/13669/lesson/84384<br>
 
 2.安卓手机Litchi 4.7 APP编辑（吾爱破解下载地址）：https://www.52pojie.cn/thread-834234-1-1.html <br>
-百度网盘链接: https://pan.baidu.com/s/14qzvBuRIYhr_LhL7BRjd4Q 提取码: w5eu <br>
+百度网盘链接: https://pan.baidu.com/s/14qzvBuRIYhr_LhL7BRjd4Q    提取码: w5eu <br>
 内置的双地图 不用下载谷歌应用 让你的御AIR也有航点功能<br>
 Android：Litchi for DJI Mavic / Phantom / Inspire / Spark版本4.7.0<br>
 - 全景模式速度和可靠性改进<br>
