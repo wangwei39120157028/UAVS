@@ -49,20 +49,20 @@ windows下使用 SITL 模拟多无人机编队请参照下面文章，注意路�
 https://blog.csdn.net/jzhd2015/article/details/108987818
 
 ### 关于flylitchi下的航线飞行
-在油管上偶然看到，通过Mission Planner地面站规划航线,保存航点后，用Excel对其进行编辑，在通过网页端Litchi导入修改后的CSV格式的数据，进而实现大疆无人机在Litchi APP上按照航线飞行。<br>
+在油管上偶然看到，通过地面站Mission Planner规划航线,保存航点后，可用Excel对其进行编辑，再通过网页端或安卓端Litchi导入修改后的CSV格式的数据，进而实现大疆无人机在Litchi APP上按照航线飞行。<br>
 1.网页版可在flylitchi官网直接编辑（国外网站-需要跳板）：https://flylitchi.com/hub<br>
 使用方法十分简单，可见《好知》教程：http://www.howzhi.com/course/13669/lesson/84384<br>
 
 2.安卓手机Litchi 4.7 APP编辑（吾爱破解下载地址）：https://www.52pojie.cn/thread-834234-1-1.html <br>
 百度网盘链接: https://pan.baidu.com/s/14qzvBuRIYhr_LhL7BRjd4Q    提取码: w5eu <br>
-内置的双地图 不用下载谷歌应用 让你的御AIR也有航点功能<br>
+内置的双地图，不用下载谷歌应用，让你的御AIR也有航点功能<br>
 Android：Litchi for DJI Mavic / Phantom / Inspire / Spark版本4.7.0<br>
 - 全景模式速度和可靠性改进<br>
 - 全景模式设置改进<br>
 - 修复了在某些设备上更改应用程序语言失败的错误<br>
 
 ### Mission planner + Google Earth 日志生成3D轨迹图
-仍需跳板，这里使用谷歌中国卫星地图代替，主要是导入.waypoint或kmz文件为主<br>
+仍需跳板，这里使用谷歌中国卫星地图代替，主要是向地图导入地面站Mission planner或控制台生成的规划路径，以.waypoint或kmz文件为主<br>
 ![1111](https://user-images.githubusercontent.com/39434325/112245151-4facce80-8c8b-11eb-9ac9-706a7bb78bc5.PNG)
 
 其他扩展插件请等待更新....
