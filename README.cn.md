@@ -47,6 +47,10 @@ Drone智能无人机路径规划仿真系统是一个具有操作控制精细、
 ### 关于多无人机的编队模拟
 windows下使用 SITL 模拟多无人机编队请参照下面文章，注意路径要在ArduCopter/下执行测试命令：
 https://blog.csdn.net/jzhd2015/article/details/108987818
+双机编队测试：
+![135469](https://user-images.githubusercontent.com/39434325/112721353-50b95680-8f3e-11eb-9b6a-e4185d8d0181.PNG)
+可分别控制左侧、右侧四翼无人机
+![4326547](https://user-images.githubusercontent.com/39434325/112721412-8100f500-8f3e-11eb-9d10-4bb640e58f13.PNG)    ![23134131](https://user-images.githubusercontent.com/39434325/112721414-86f6d600-8f3e-11eb-82f7-eb4f960e2012.PNG)
 
 ### 关于flylitchi下的航线飞行
 在油管上偶然看到，通过地面站Mission Planner规划航线,保存航点后，可用Excel对其进行编辑，再通过网页端或安卓端Litchi导入修改后的CSV格式的数据，进而实现大疆无人机在Litchi APP上按照航线飞行。<br>
