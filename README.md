@@ -43,12 +43,13 @@ The advantage of using this software is that it absorbs the results obtained abr
 
 ## EXTENSION<br>
 ### On the formation simulation of multi-UAV
-Using SITL to simulate multi-UAV formation under Windows, please refer to the following article. Note that the path should be tested under ArduCopter/ :
-https://blog.csdn.net/jzhd2015/article/details/108987818
-Test of two-plane formation path algorithm:
-![4326547](https://user-images.githubusercontent.com/39434325/112721732-9aa33c00-8f40-11eb-8fc5-45a0c5cdcd3c.PNG)
-It can plan the flight path of left wing and right wing UAV respectively:
-![6464161](https://user-images.githubusercontent.com/39434325/112722145-ac85de80-8f42-11eb-93ec-40d36548bd53.PNG)
+Using SITL to simulate multi-UAV formation under Windows, please refer to the following article. Note that the path should be tested under ArduCopter/ :<br>
+https://blog.csdn.net/jzhd2015/article/details/108987818<br>
+![电风扇的成熟度](https://user-images.githubusercontent.com/39434325/112772851-b94f2300-9065-11eb-8a29-4ac8b08d2c4f.PNG)<br>
+Test of two-plane formation path algorithm:<br>
+![4326547](https://user-images.githubusercontent.com/39434325/112721732-9aa33c00-8f40-11eb-8fc5-45a0c5cdcd3c.PNG)<br>
+It can plan the flight path of left wing and right wing UAV respectively:<br>
+![6464161](https://user-images.githubusercontent.com/39434325/112722145-ac85de80-8f42-11eb-93ec-40d36548bd53.PNG)<br>
 
 ### About the flight line under Flylitchi
 I happened to see it on the oil pipe. After planning the flight route on the ground station Mission Planner and saving the navigation point, I could edit it with Excel, and then import the modified data in CSV format through the webpage or Android Litchi, so as to realize the DJI UAV flying in accordance with the flight route on the Litchi App.<br>
