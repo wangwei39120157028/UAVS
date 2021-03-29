@@ -47,6 +47,7 @@ Drone智能无人机路径规划仿真系统是一个具有操作控制精细、
 ### 关于多无人机的编队模拟
 windows下使用 SITL 模拟多无人机编队请参照下面文章，注意路径要在ArduCopter/下执行测试命令：
 https://blog.csdn.net/jzhd2015/article/details/108987818<br>
+![电风扇的成熟度](https://user-images.githubusercontent.com/39434325/112772851-b94f2300-9065-11eb-8a29-4ac8b08d2c4f.PNG)<br>
 双机编队路径算法测试：
 ![4326547](https://user-images.githubusercontent.com/39434325/112721732-9aa33c00-8f40-11eb-8fc5-45a0c5cdcd3c.PNG)
 可分别规划左侧、右侧四翼无人机飞行路径
