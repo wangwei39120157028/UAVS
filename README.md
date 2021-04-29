@@ -31,6 +31,90 @@ System supported by open source SITL uav simulation platform, through FlightGear
 ![12](https://user-images.githubusercontent.com/39434325/110713442-e9608e80-823c-11eb-86df-85b19b823738.png)
 #### Flight Mission(3)
 ![13](https://user-images.githubusercontent.com/39434325/110713570-1b71f080-823d-11eb-97da-6651e9a00d60.png)
+### 7. Path planning
+The path algorithm is based on the redevelopment of Huiming Zhou's open source algorithm library (ZHM-Real /PathPlanning), adding elements such as UAV simulation, geographic coordinate conversion, and Leaflet visualization.
+#### Directory Structure<br>
+
+	drone_PathPlanning
+		│  fence.txt
+		│  leaflet_folium_plot.py
+		│  mission.waypoints
+		│          
+		├─folium-0.12.1
+		│              
+		├─leaflet
+		│          
+		├─results
+		│      CheckZorder.html
+		│      us-states.json
+		│      US_Unemployment_Oct2012.csv
+		│      
+		├─Sampling_based_Planning
+		│  ├─algorithm_mission_rrt2D
+		│  │      algorithm_mission_batch_informed_trees.waypoints
+		│  │      algorithm_mission_dubins_rrt_star.waypoints
+		│  │      algorithm_mission_dynamic_rrt.waypoints
+		│  │      algorithm_mission_extended_rrt.waypoints
+		│  │      algorithm_mission_fast_marching_trees.waypoints
+		│  │      algorithm_mission_informed_rrt_star.waypoints
+		│  │      algorithm_mission_rrt.waypoints
+		│  │      algorithm_mission_rrt_connect.waypoints
+		│  │      algorithm_mission_rrt_star.waypoints
+		│  │      algorithm_mission_rrt_star_smart.waypoints
+		│  │      
+		│  ├─rrt_2D
+		│  │	  RRT
+		│  │	  RRT-Connect
+		│  │	  Extended-RRT
+		│  │	  Dynamic-RRT
+		│  │	  RRT*
+		│  │	  Informed RRT*
+		│  │	  RRT* Smart
+		│  │	  Anytime RRT*
+		│  │	  Closed-Loop RRT*
+		│  │	  Spline-RRT*
+		│  │	  Fast Marching Trees (FMT*)
+		│  │	  Batch Informed Trees (BIT*)
+		│  │          
+		│  ├─rrt_2D_路径优化效果图
+		│  │      
+		│  └─rrt_3D        
+		│              
+		└─Search_based_Planning
+			├─algorithm_mission_Search2D
+			│      algorithm_mission_Anytime_D_star.waypoints
+			│      algorithm_mission_ARAstar.waypoints
+			│      algorithm_mission_Astar.waypoints
+			│      algorithm_mission_Best_First.waypoints
+			│      algorithm_mission_bfs.waypoints
+			│      algorithm_mission_Bidirectional_a_star.waypoints
+			│      algorithm_mission_Bidirectional_dfs.waypoints
+			│      algorithm_mission_Bidirectional_Dijkstra.waypoints
+			│      algorithm_mission_Bidirectional_D_star.waypoints
+			│      algorithm_mission_Bidirectional_D_star_Lite.waypoints
+			│      algorithm_mission_Bidirectional_LPAstar.waypoints
+			│      algorithm_mission_Bidirectional_LRTAstar.waypoints
+			│      algorithm_mission_Bidirectional_RTAAStar.waypoints
+			│      
+			├─Search_2D
+			│      Breadth-First Searching (BFS)
+			│      Depth-First Searching (DFS)
+			│      Best-First Searching
+			│      Dijkstra's
+			│      A*
+			│      Bidirectional A*
+			│      Anytime Repairing A*
+			│      Learning Real-time A* (LRTA*)
+			│      Real-time Adaptive A* (RTAA*)
+			│      Lifelong Planning A* (LPA*)
+			│      Dynamic A* (D*)
+			│      D* Lite
+			│      Anytime D*
+			│          
+			├─Search_2D_路径优化效果图
+			│      
+			└─Search_3D
+
 ## Solve The Problem
 
 Intelligent UAV path planning simulation system solves the problem that ordinary UAV can not accurately plan the path, and ordinary UAV is not enough support, inconvenient to control, difficult to use in the actual war. This software can be designed for flight mission routes in advance, using a flight simulator unmanned aerial vehicle (uav) in the real-time state of mission, through strengthening unmanned aerial vehicle (uav) in the system against ground station module control, simulation of the unmanned aerial vehicle (uav) group of joint action tactical fighting, sailing and output data for the use of real unmanned aerial vehicle (uav), the uav size short, quick release, huge resource advantage as far as possible.
