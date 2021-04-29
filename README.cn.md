@@ -33,6 +33,15 @@ Drone智能无人机路径规划仿真系统是一个具有操作控制精细、
 ![12](https://user-images.githubusercontent.com/39434325/110713854-963b0b80-823d-11eb-9fef-5fd23bde2a9c.png)
 #### 飞行任务（三）
 ![13](https://user-images.githubusercontent.com/39434325/110713868-9cc98300-823d-11eb-9fe1-7e2ce670fb2e.png)
+### 7. 路径规划
+路径算法是基于Huiming Zhou的开源算法库（zhm-real/PathPlanning）的再开发，增加了无人机模拟、地理坐标转换、leaflet可视化等元素。
+#### 自定义路线与障碍区
+![自定义路线与障碍区](https://user-images.githubusercontent.com/39434325/116529533-a7d09380-a90f-11eb-9ad6-6e239d336e0b.PNG)
+#### rrt_2D_路径优化效果图
+![rrt_2D_路径优化效果图](https://user-images.githubusercontent.com/39434325/116529610-c171db00-a90f-11eb-9506-8b2d7979d1f1.png)
+#### Search_2D_路径优化效果图
+![Search_2D_路径优化效果图](https://user-images.githubusercontent.com/39434325/116529702-cf276080-a90f-11eb-951e-f6e5ccd3f7ab.png) <br>
+
 ## 二、解决问题
 
 智能无人机路径规划仿真系统解决了普通无人机无法精准规划路径的问题，且普通无人机不够托底，不便控制，难以运用于实际战争。本软件可以预先为飞行任务设计航线，使用飞行模拟器记录无人机在飞行任务中的实时状态，通过地面站模块强化无人机在体系对抗中的受控度，模拟无人机群联合行动的战术战法，然后输出航行数据供真实无人机使用，将无人机体型短小、行动迅速、资源庞大的优势尽可能的释放出来。
