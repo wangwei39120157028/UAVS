@@ -35,6 +35,88 @@ Drone智能无人机路径规划仿真系统是一个具有操作控制精细、
 ![13](https://user-images.githubusercontent.com/39434325/110713868-9cc98300-823d-11eb-9fe1-7e2ce670fb2e.png)
 ### 7. 路径规划
 路径算法是基于Huiming Zhou的开源算法库（zhm-real/PathPlanning）的再开发，增加了无人机模拟、地理坐标转换、leaflet可视化等元素。
+#### 目录导图<br>
+
+	drone_PathPlanning
+		│  fence.txt
+		│  leaflet_folium_plot.py
+		│  mission.waypoints
+		│          
+		├─folium-0.12.1
+		│              
+		├─leaflet
+		│          
+		├─results
+		│      CheckZorder.html
+		│      us-states.json
+		│      US_Unemployment_Oct2012.csv
+		│      
+		├─Sampling_based_Planning
+		│  ├─algorithm_mission_rrt2D
+		│  │      algorithm_mission_batch_informed_trees.waypoints
+		│  │      algorithm_mission_dubins_rrt_star.waypoints
+		│  │      algorithm_mission_dynamic_rrt.waypoints
+		│  │      algorithm_mission_extended_rrt.waypoints
+		│  │      algorithm_mission_fast_marching_trees.waypoints
+		│  │      algorithm_mission_informed_rrt_star.waypoints
+		│  │      algorithm_mission_rrt.waypoints
+		│  │      algorithm_mission_rrt_connect.waypoints
+		│  │      algorithm_mission_rrt_star.waypoints
+		│  │      algorithm_mission_rrt_star_smart.waypoints
+		│  │      
+		│  ├─rrt_2D
+		│  │	  RRT
+		│  │	  RRT-Connect
+		│  │	  Extended-RRT
+		│  │	  Dynamic-RRT
+		│  │	  RRT*
+		│  │	  Informed RRT*
+		│  │	  RRT* Smart
+		│  │	  Anytime RRT*
+		│  │	  Closed-Loop RRT*
+		│  │	  Spline-RRT*
+		│  │	  Fast Marching Trees (FMT*)
+		│  │	  Batch Informed Trees (BIT*)
+		│  │          
+		│  ├─rrt_2D_路径优化效果图
+		│  │      
+		│  └─rrt_3D        
+		│              
+		└─Search_based_Planning
+			├─algorithm_mission_Search2D
+			│      algorithm_mission_Anytime_D_star.waypoints
+			│      algorithm_mission_ARAstar.waypoints
+			│      algorithm_mission_Astar.waypoints
+			│      algorithm_mission_Best_First.waypoints
+			│      algorithm_mission_bfs.waypoints
+			│      algorithm_mission_Bidirectional_a_star.waypoints
+			│      algorithm_mission_Bidirectional_dfs.waypoints
+			│      algorithm_mission_Bidirectional_Dijkstra.waypoints
+			│      algorithm_mission_Bidirectional_D_star.waypoints
+			│      algorithm_mission_Bidirectional_D_star_Lite.waypoints
+			│      algorithm_mission_Bidirectional_LPAstar.waypoints
+			│      algorithm_mission_Bidirectional_LRTAstar.waypoints
+			│      algorithm_mission_Bidirectional_RTAAStar.waypoints
+			│      
+			├─Search_2D
+			│      Breadth-First Searching (BFS)
+			│      Depth-First Searching (DFS)
+			│      Best-First Searching
+			│      Dijkstra's
+			│      A*
+			│      Bidirectional A*
+			│      Anytime Repairing A*
+			│      Learning Real-time A* (LRTA*)
+			│      Real-time Adaptive A* (RTAA*)
+			│      Lifelong Planning A* (LPA*)
+			│      Dynamic A* (D*)
+			│      D* Lite
+			│      Anytime D*
+			│          
+			├─Search_2D_路径优化效果图
+			│      
+			└─Search_3D
+
 #### 自定义路线与障碍区
 ![自定义路线与障碍区](https://user-images.githubusercontent.com/39434325/116529533-a7d09380-a90f-11eb-9ad6-6e239d336e0b.PNG)
 #### rrt_2D_路径优化效果图
