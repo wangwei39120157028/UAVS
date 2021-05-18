@@ -175,10 +175,11 @@ The path algorithm is based on the redevelopment of Huiming Zhou's open source a
 ![Search_2D_路径优化效果图](https://user-images.githubusercontent.com/39434325/116529702-cf276080-a90f-11eb-951e-f6e5ccd3f7ab.png) <br>
 ### Indoor obstacle avoidance
 Because the indoor structure has the characteristics of narrow space and many distractions, the path planning degree at this time focuses more on the effect of three-dimensional obstacle avoidance, and the map is meaningless. Based on Huiming Zhou's open source algorithm library, the indoor environment was created using the idea of modeling, and the 3D algorithms of Search_based_Planning and Sampling_based_Planning were used to plan the flight path for obstacle avoidance. The flight demo is as follows:<br>
-
+![IOA_DstarLite3D](https://user-images.githubusercontent.com/39434325/118637888-dd7ae500-b808-11eb-916b-530b1d8393ee.gif)
 #### rrt_3D_Indoor obstacle avoidance renderings
-
+![rrt_3D_室内避障效果图1](https://user-images.githubusercontent.com/39434325/118637923-e4a1f300-b808-11eb-83f0-5c9137af4a1a.PNG)
 #### Search_3D_Indoor obstacle avoidance renderings
+![Search_3D_室内避障效果图1](https://user-images.githubusercontent.com/39434325/118637946-e966a700-b808-11eb-8006-f21af8f695be.PNG)
 
 ## Solve The Problem
 
