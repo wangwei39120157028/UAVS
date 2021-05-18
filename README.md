@@ -36,18 +36,15 @@ The path algorithm is based on the redevelopment of Huiming Zhou's open source a
 #### Directory Structure<br>
 
 	drone_PathPlanning
-		│  fence.txt
-		│  leaflet_folium_plot.py
-		│  mission.waypoints
+		├─fence.txt
+		├─leaflet_folium_plot.py
+		├─mission.waypoints
 		│          
 		├─folium-0.12.1
 		│              
 		├─leaflet
 		│          
 		├─results
-		│      CheckZorder.html
-		│      us-states.json
-		│      US_Unemployment_Oct2012.csv
 		│      
 		├─Sampling_based_Planning
 		│  ├─algorithm_mission_rrt2D
@@ -62,24 +59,51 @@ The path algorithm is based on the redevelopment of Huiming Zhou's open source a
 		│  │      algorithm_mission_rrt_star.waypoints
 		│  │      algorithm_mission_rrt_star_smart.waypoints
 		│  │      
+		│  ├─indoor_obstacle_avoidance_rrt3D
+		│  │      IOAPath_rrt3D.waypoints
+		│  │      IOAPath_rrt_star3D.waypoints
+		│  │      IOA_BIT_star3D.waypoints
+		│  │      IOA_extend_rrt3D.waypoints
+		│  │      
 		│  ├─rrt_2D
-		│  │	  RRT
-		│  │	  RRT-Connect
-		│  │	  Extended-RRT
-		│  │	  Dynamic-RRT
-		│  │	  RRT*
-		│  │	  Informed RRT*
-		│  │	  RRT* Smart
-		│  │	  Anytime RRT*
-		│  │	  Closed-Loop RRT*
-		│  │	  Spline-RRT*
-		│  │	  Fast Marching Trees (FMT*)
-		│  │	  Batch Informed Trees (BIT*)
+		│  │      batch_informed_trees.py
+		│  │      draw.py
+		│  │      dubins_path.py
+		│  │      dubins_rrt_star.py
+		│  │      dynamic_rrt.py
+		│  │      env.py
+		│  │      extended_rrt.py
+		│  │      fast_marching_trees.py
+		│  │      informed_rrt_star.py
+		│  │      judge.py
+		│  │      plotting.py
+		│  │      queue.py
+		│  │      rrt.py
+		│  │      rrt_connect.py
+		│  │      rrt_star.py
+		│  │      rrt_star_smart.py
+		│  │      utils.py
+		│  │      __init__.py
 		│  │          
 		│  ├─rrt_2D_路径优化效果图
 		│  │      
-		│  └─rrt_3D        
-		│              
+		│  ├─rrt_3D
+		│  │     ABIT_star3D.py
+		│  │     BIT_star3D.py
+		│  │     dynamic_rrt3D.py
+		│  │     env3D.py
+		│  │     extend_rrt3D.py
+		│  │     FMT_star3D.py
+		│  │     informed_rrt_star3D.py
+		│  │     plot_util3D.py
+		│  │     queueL.py
+		│  │     rrt3D.py
+		│  │     rrt_connect3D.py
+		│  │     rrt_star3D.py
+		│  │     utils3D.py
+		│  │          
+		│  └─rrt_3D_室内避障效果图
+		│          
 		└─Search_based_Planning
 			├─algorithm_mission_Search2D
 			│      algorithm_mission_Anytime_D_star.waypoints
@@ -96,31 +120,65 @@ The path algorithm is based on the redevelopment of Huiming Zhou's open source a
 			│      algorithm_mission_Bidirectional_LRTAstar.waypoints
 			│      algorithm_mission_Bidirectional_RTAAStar.waypoints
 			│      
+			├─indoor_obstacle_avoidance_Search_3D
+			│      IOA_Anytime_Dstar3D.waypoints
+			│      IOA_Astar3D.waypoints
+			│      IOA_bidirectional_Astar3D.waypoints
+			│      IOA_Dstar3D.waypoints
+			│      IOA_DstarLite3D.waypoints
+			│      IOA_LP_Astar3D.waypoints
+			│      IOA_LRT_Astar3D.waypoints
+			│      IOA_RTA_Astar3D.waypoints
+			│      
 			├─Search_2D
-			│      Breadth-First Searching (BFS)
-			│      Depth-First Searching (DFS)
-			│      Best-First Searching
-			│      Dijkstra's
-			│      A*
-			│      Bidirectional A*
-			│      Anytime Repairing A*
-			│      Learning Real-time A* (LRTA*)
-			│      Real-time Adaptive A* (RTAA*)
-			│      Lifelong Planning A* (LPA*)
-			│      Dynamic A* (D*)
-			│      D* Lite
-			│      Anytime D*
+			│     Anytime_D_star.py
+			│     ARAstar.py
+			│     Astar.py
+			│     Best_First.py
+			│     bfs.py
+			│     Bidirectional_a_star.py
+			│     dfs.py
+			│     Dijkstra.py
+			│     D_star.py
+			│     D_star_Lite.py
+			│     env.py
+			│     LPAstar.py
+			│     LRTAstar.py
+			│     plotting.py
+			│     queueL.py
+			│     RTAAStar.py
 			│          
 			├─Search_2D_路径优化效果图
 			│      
-			└─Search_3D
+			├─Search_3D
+			│     Anytime_Dstar3D.py
+			│     Astar3D.py
+			│     bidirectional_Astar3D.py
+			│     Dstar3D.py
+			│     DstarLite3D.py
+			│     env3D.py
+			│     LP_Astar3D.py
+			│     LRT_Astar3D.py
+			│     plot_util3D.py
+			│     queueL.py
+			│     RTA_Astar3D.py
+			│     utils3D.py
+			│          
+			└─Search_3D_室内避障效果图
 
+### Path optimization
 #### Custom routes and obstacle areas
 ![自定义路线与障碍区](https://user-images.githubusercontent.com/39434325/116529533-a7d09380-a90f-11eb-9ad6-6e239d336e0b.PNG)
 #### rrt_2D Path optimization effect chart
 ![rrt_2D_路径优化效果图](https://user-images.githubusercontent.com/39434325/116529610-c171db00-a90f-11eb-9506-8b2d7979d1f1.png)
 #### Search_2D Path optimization effect chart
 ![Search_2D_路径优化效果图](https://user-images.githubusercontent.com/39434325/116529702-cf276080-a90f-11eb-951e-f6e5ccd3f7ab.png) <br>
+### Indoor obstacle avoidance
+Because the indoor structure has the characteristics of narrow space and many distractions, the path planning degree at this time focuses more on the effect of three-dimensional obstacle avoidance, and the map is meaningless. Based on Huiming Zhou's open source algorithm library, the indoor environment was created using the idea of modeling, and the 3D algorithms of Search_based_Planning and Sampling_based_Planning were used to plan the flight path for obstacle avoidance. The flight demo is as follows:<br>
+
+#### rrt_3D_Indoor obstacle avoidance renderings
+
+#### Search_3D_Indoor obstacle avoidance renderings
 
 ## Solve The Problem
 
