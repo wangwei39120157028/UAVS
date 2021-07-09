@@ -168,8 +168,8 @@ Drone智能无人机路径规划仿真系统是一个具有操作控制精细、
 			│          
 			└─Search_3D_室内避障效果图
 
-### 路径优化
-#### 自定义路线与障碍区
+### 路径规划
+#### 室外避障
 ![自定义路线与障碍区](https://user-images.githubusercontent.com/39434325/116529533-a7d09380-a90f-11eb-9ad6-6e239d336e0b.PNG)
 #### rrt_2D_路径优化效果图
 ![rrt_2D_路径优化效果图](https://user-images.githubusercontent.com/39434325/116529610-c171db00-a90f-11eb-9506-8b2d7979d1f1.png)
@@ -183,6 +183,13 @@ Drone智能无人机路径规划仿真系统是一个具有操作控制精细、
 ![rrt_3D_室内避障效果图1](https://user-images.githubusercontent.com/39434325/118637923-e4a1f300-b808-11eb-83f0-5c9137af4a1a.PNG)
 #### Search_3D_室内避障效果图
 ![Search_3D_室内避障效果图1](https://user-images.githubusercontent.com/39434325/118637946-e966a700-b808-11eb-8006-f21af8f695be.PNG)
+
+### 路径优化
+增加随机、贪心、路径最优算法聚类，区域路径随机生成、区域路径最短距离优先生成算法对多无人机集群飞行路径进行优化。
+#### 算法生成各无人机飞行情况，经过航点，飞行距离信息
+![路径优化-1](https://user-images.githubusercontent.com/39434325/125012329-9557a080-e09c-11eb-908d-01ae1a72e55d.PNG)
+#### 路径优化效果图
+![路径优化效果图片](https://user-images.githubusercontent.com/39434325/125012342-9be61800-e09c-11eb-8c72-672537dfb60c.png)
 
 ## 二、解决问题
 
