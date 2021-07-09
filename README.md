@@ -166,8 +166,8 @@ The path algorithm is based on the redevelopment of Huiming Zhou's open source a
 			│          
 			└─Search_3D_室内避障效果图
 
-### Path planning
-#### Outdoor obstacle avoidance
+### Outdoor obstacle avoidance
+#### Custom routes and obstacle areas
 ![自定义路线与障碍区](https://user-images.githubusercontent.com/39434325/116529533-a7d09380-a90f-11eb-9ad6-6e239d336e0b.PNG)
 #### rrt_2D Path optimization effect chart
 ![rrt_2D_路径优化效果图](https://user-images.githubusercontent.com/39434325/116529610-c171db00-a90f-11eb-9506-8b2d7979d1f1.png)
