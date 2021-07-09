@@ -180,6 +180,12 @@ Because the indoor structure has the characteristics of narrow space and many di
 ![rrt_3D_室内避障效果图1](https://user-images.githubusercontent.com/39434325/118637923-e4a1f300-b808-11eb-83f0-5c9137af4a1a.PNG)
 #### Search_3D_Indoor obstacle avoidance renderings
 ![Search_3D_室内避障效果图1](https://user-images.githubusercontent.com/39434325/118637946-e966a700-b808-11eb-8006-f21af8f695be.PNG)
+### Path optimization
+To optimize the flight paths of multiple UAV clusters, we add random, greedy, path optimal algorithm clustering, regional path random generation, regional path shortest distance first generation algorithm.
+#### The algorithm generates the flight status of each UAV, the navigation point and the flight distance information
+![路径优化-1](https://user-images.githubusercontent.com/39434325/125012016-0ea2c380-e09c-11eb-9f04-5919bb37db61.PNG)
+#### Path optimization effect chart
+![路径优化效果图片](https://user-images.githubusercontent.com/39434325/125012038-1498a480-e09c-11eb-89dc-5467bebf1824.png)
 
 ## Solve The Problem
 
