@@ -1,5 +1,6 @@
-# IntelligentUAVPathPlanningSimulationSystemS-Drone![](https://img.shields.io/badge/IntelligentUAVPathPlanningSimulationSystem-Drone-brightgreen)<br>
-Drone  Intelligent UAV path planning simulation system is a software with fine operation control, strong platform integration, omnidirectional model building and application automation. It takes the UAV war between A and B in Zone C as the background. The core function of the system is to plan the UAV route through the simulation platform and verify the output. The data can be imported into the real UAV to make it accurately arrive at any position in the battlefield according to the specified route and support the joint action of multi-person and multi-device formation.
+# UAVS
+![](https://img.shields.io/badge/UAVS-Drone-red)<br>
+UAVS_Drone  Intelligent UAV path planning simulation system is a software with fine operation control, strong platform integration, omnidirectional model building and application automation. It takes the UAV war between A and B in Zone C as the background. The core function of the system is to plan the UAV route through the simulation platform and verify the output. The data can be imported into the real UAV to make it accurately arrive at any position in the battlefield according to the specified route and support the joint action of multi-person and multi-device formation.
 ### [Video Introduction](https://www.yuque.com/u12074055/kb/qqkaw9)
 ## Main Features
 ![1](https://user-images.githubusercontent.com/39434325/110713243-8d960580-823c-11eb-9caf-3b7a572d9732.jpeg)<br>
