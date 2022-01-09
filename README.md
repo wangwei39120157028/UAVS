@@ -247,6 +247,6 @@ https://github.com/dhondta/dronesploit<br>
 
 ## Project Link<br>
 JianShu：https://www.jianshu.com/p/b1e6b2efb96f<br>
-Github：https://github.com/wangwei39120157028/IntelligentUAVPathPlanningSimulationSystem-Drone<br>
-Gitee：https://gitee.com/wwy2018/intelligent-uavpath-planning-simulation-system-S<br>
+Github：https://github.com/wangwei39120157028/UAVS<br>
+Gitee：https://gitee.com/wwy2018/UAVS<br>
 Welcome To Star！！！
