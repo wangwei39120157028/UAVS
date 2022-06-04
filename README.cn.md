@@ -1,7 +1,9 @@
 # UAVS
 ![](https://img.shields.io/badge/UAVS-Drone-red)<br>
 UAVS_Drone智能无人机路径规划仿真系统是一个具有操作控制精细、平台整合性强、全方向模型建立与应用自动化特点的软件。它以A、B两国在C区开展无人机战争为背景，该系统的核心功能是通过仿真平台规划无人机航线，并进行验证输出，数据可导入真实无人机，使其按照规定路线精准抵达战场任一位置，支持多人多设备编队联合行动。<br>
-#### QQ交流群：809473689
+#### QQ交流1群：809473689（已满）
+#### QQ交流2群：774627310
+#### QQ交流3群：712810644
 #### 加微信-进入交流群：wwy18795980897
 ### [视频简介](https://www.yuque.com/u12074055/kb/qqkaw9)
 ## 一、主要特点
@@ -231,6 +233,13 @@ Android：Litchi for DJI Mavic / Phantom / Inspire / Spark版本4.7.0<br>
 
 其他扩展插件请等待更新....
 
+## Problems 关于一些普遍反映问题的解决方法<br>
+### 1.关于Cywin64无法带参数<br>
+关于Cywin64无法带参数启动于Windows下CMD终端，-e参数执行命令找不到目标文件夹无果，mintty的启动位置总是不统一，更重要的是没有具体在mintty内执行命令的语法参数。<br>
+### 2.关于FlightGear在虚拟机中无法正常运行的问题<br>
+智能无人机路径规划仿真系统在虚拟机内无法运行FlightGear 2018.2.2，其原因有二：一是虚拟机的VMTools有问题，导致与显卡交互不当，重新安装无果；二是虚拟机不支持opengl，无法显示FlightGear的界面。<br>
+### 3.关于CorelDRAW和智能无人机仿真系统path冲突的问题<br>
+UAVS和CorelDRAW等软件对QT_QPA_PLATFORM_PLUGIN_PATH路径均有使用，可能造成冲突，可在path中更改为UAVS路径...\python-3.7.5-embed-amd64\Lib\site-packages\PyQt5\Qt\plugins解决。<br>
 
 ## 五、感谢<br>
 **CSDN：**<br>
