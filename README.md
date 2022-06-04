@@ -233,6 +233,15 @@ Google China satellite map is used instead. It mainly imports the planned path g
 
 Please wait for updates on other extensions....
 
+## Problems 关于一些普遍反映问题的解决方法<br>
+### 1.关于Cywin64无法带参数<br>
+关于Cywin64无法带参数启动于Windows下CMD终端，-e参数执行命令找不到目标文件夹无果，mintty的启动位置总是不统一，更重要的是没有具体在mintty内执行命令的语法参数。<br>
+### 2.关于FlightGear在虚拟机中无法正常运行的问题<br>
+智能无人机路径规划仿真系统在虚拟机内无法运行FlightGear 2018.2.2，其原因有二：一是虚拟机的VMTools有问题，导致与显卡交互不当，重新安装无果；二是虚拟机不支持opengl，无法显示FlightGear的界面。<br>
+### 3.关于CorelDRAW和智能无人机仿真系统path冲突的问题<br>
+UAVS和CorelDRAW等软件对QT_QPA_PLATFORM_PLUGIN_PATH路径均有使用，可能造成冲突，可在path中更改为UAVS路径...\python-3.7.5-embed-amd64\Lib\site-packages\PyQt5\Qt\plugins解决。<br>
+
+
 ## Gratitude<br>
 **CSDN：**<br>
 https://blog.csdn.net/qinguoxiaoziyangyue/article/details/77712064<br>
