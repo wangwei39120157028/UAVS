@@ -1,0 +1,6 @@
+QT_QPA_PLATFORM_PLUGIN_PATH
+UAVS和CorelDRAW等软件对QT_QPA_PLATFORM_PLUGIN_PATH路径均有使用，可能造成冲突，可在path中更改为UAVS路径...\python-3.7.5-embed-amd64\Lib\site-packages\PyQt5\Qt\plugins解决。
+例如我path路径下：
+D:\new\Python3\iPyGIRS\python-3.7.5-embed-amd64\Lib\site-packages\PyQt5\Qt\plugins
+C:\Program Files\Corel\CorelDRAW Graphics Suite 2020\Programs64\QtPlugins\platforms
+均为我QT_QPA_PLATFORM_PLUGIN_PATH，造成冲突，建议更改为...\python-3.7.5-embed-amd64\Lib\site-packages\PyQt5\Qt\plugins
