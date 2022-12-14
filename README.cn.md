@@ -1,5 +1,4 @@
-# UAVS
-![](https://img.shields.io/badge/UAVS-Drone-red)<br>
+# ![UAVS](https://user-images.githubusercontent.com/39434325/207494865-00861da1-0a66-4d4e-8526-603d9cc2fc52.png) ![](https://img.shields.io/badge/UAVS-Drone-red)<br>
 UAVS_Drone智能无人机路径规划仿真系统是一个具有操作控制精细、平台整合性强、全方向模型建立与应用自动化特点的软件。它以A、B两国在C区开展无人机战争为背景，该系统的核心功能是通过仿真平台规划无人机航线，并进行验证输出，数据可导入真实无人机，使其按照规定路线精准抵达战场任一位置，支持多人多设备编队联合行动。<br>
 #### QQ交流1群：809473689（已满）
 #### QQ交流2群：774627310
