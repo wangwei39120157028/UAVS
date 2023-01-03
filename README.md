@@ -6,7 +6,9 @@ UAVS_Drone  Intelligent UAV path planning simulation system is a software with f
 #### QQ交流3群：712810644
 #### 加微信-进入交流群：wwy18795980897
 ### [视频简介](https://www.yuque.com/u12074055/kb/qqkaw9)
-### [Video Introduction](https://www.yuque.com/u12074055/kb/qqkaw9)
+### [Video Introduction](https://www.yuque.com/u12074055/kb/qqkaw9)<br>
+### [安装手册](https://gitee.com/wwy2018/UAVS/blob/master/UAVS_InstructionManual.pdf)
+### [Installation manual](https://gitee.com/wwy2018/UAVS/blob/master/UAVS_InstructionManual.pdf)<br>
 ## Main Features
 ![1](https://user-images.githubusercontent.com/39434325/110713243-8d960580-823c-11eb-9caf-3b7a572d9732.jpeg)<br>
 System supported by open source SITL uav simulation platform, through FlightGear rendering real battlefield environment, integrated modeling, 2 d vertical, three-dimensional dynamic model simulation, script control, ground station monitoring, data processing, and other functions, in addition, the simulation system supports a variety of global map load, simulate the key region of the three dimensional environment, can be used throughout the global remote sensing monitoring in the scene.
