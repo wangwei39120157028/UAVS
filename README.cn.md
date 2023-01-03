@@ -4,7 +4,8 @@ UAVS_Drone智能无人机路径规划仿真系统是一个具有操作控制精�
 #### QQ交流2群：774627310
 #### QQ交流3群：712810644
 #### 加微信-进入交流群：wwy18795980897
-### [视频简介](https://www.yuque.com/u12074055/kb/qqkaw9)
+### [视频简介](https://www.yuque.com/u12074055/kb/qqkaw9)<br>
+### [安装手册](https://gitee.com/wwy2018/UAVS/blob/master/UAVS_InstructionManual.pdf)<br>
 ## 一、主要特点
 ![1](https://user-images.githubusercontent.com/39434325/110713673-43615400-823d-11eb-91db-b8151e68e926.jpeg)<br>
 系统以开源无人机仿真平台SITL为支撑，通过FlightGear渲染真实战场环境，集成了动力学模型建模、二维俯视、三维模拟、脚本控制、地面站监控、数据处理等功能，此外，仿真系统支持加载多种全球地图，模拟各大重点地域的三维环境，可应用于全球各处遥感监测的场景中。
