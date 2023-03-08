@@ -43,7 +43,7 @@ UAVS_Drone智能无人机路径规划仿真系统是一个具有操作控制精�
 路径算法是基于Huiming Zhou的开源算法库（zhm-real/PathPlanning）的再开发，增加了无人机模拟、地理坐标转换、leaflet可视化等元素。
 #### 目录导图<br>
 
-	drone_PathPlanning
+	drone_PathPlanning.
 		├─fence.txt
 		├─leaflet_folium_plot.py
 		├─mission.waypoints
@@ -74,22 +74,22 @@ UAVS_Drone智能无人机路径规划仿真系统是一个具有操作控制精�
 		│  │      IOA_extend_rrt3D.waypoints
 		│  │      
 		│  ├─rrt_2D
-		│  │      batch_informed_trees.py
+		│  │      batch_informed_trees.py       BIT*算法
 		│  │      draw.py
-		│  │      dubins_path.py
-		│  │      dubins_rrt_star.py
-		│  │      dynamic_rrt.py
+		│  │      dubins_path.py                Dubins路径算法
+		│  │      dubins_rrt_star.py            Dubins_rrt*算法
+		│  │      dynamic_rrt.py                动态RRT算法
 		│  │      env.py
-		│  │      extended_rrt.py
-		│  │      fast_marching_trees.py
-		│  │      informed_rrt_star.py
+		│  │      extended_rrt.py               Extended_RRT算法
+		│  │      fast_marching_trees.py        FMT*算法
+		│  │      informed_rrt_star.py          Informed_rrt*算法
 		│  │      judge.py
 		│  │      plotting.py
 		│  │      queue.py
-		│  │      rrt.py
-		│  │      rrt_connect.py
-		│  │      rrt_star.py
-		│  │      rrt_star_smart.py
+		│  │      rrt.py                        rrt算法
+		│  │      rrt_connect.py                RRT_CONNECT算法
+		│  │      rrt_star.py                   rrt*算法
+		│  │      rrt_star_smart.py             rrt*-Smart算法
 		│  │      utils.py
 		│  │      __init__.py
 		│  │          
@@ -139,22 +139,22 @@ UAVS_Drone智能无人机路径规划仿真系统是一个具有操作控制精�
 			│      IOA_RTA_Astar3D.waypoints
 			│      
 			├─Search_2D
-			│     Anytime_D_star.py
-			│     ARAstar.py
-			│     Astar.py
-			│     Best_First.py
-			│     bfs.py
-			│     Bidirectional_a_star.py
-			│     dfs.py
-			│     Dijkstra.py
-			│     D_star.py
-			│     D_star_Lite.py
+			│     Anytime_D_star.py           AnytimeD*搜索算法
+			│     ARAstar.py                  ARA*搜索算法
+			│     Astar.py                    A*搜索算法
+			│     Best_First.py               最佳路径优先搜索算法
+			│     bfs.py                      广度优先算法
+			│     Bidirectional_a_star.py     双向A*搜索算法
+			│     dfs.py                      深度优先搜索算法
+			│     Dijkstra.py                 Dijkstra搜索算法
+			│     D_star.py                   D*搜索算法
+			│     D_star_Lite.py              D*反向搜索算法
 			│     env.py
-			│     LPAstar.py
-			│     LRTAstar.py
+			│     LPAstar.py                  终身规划A*算法
+			│     LRTAstar.py                 LRTA*搜索算法
 			│     plotting.py
 			│     queueL.py
-			│     RTAAStar.py
+			│     RTAAStar.py                 RTAA*搜索算法
 			│          
 			├─Search_2D_路径优化效果图
 			│      
