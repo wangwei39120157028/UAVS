@@ -234,6 +234,12 @@ Android：Litchi for DJI Mavic / Phantom / Inspire / Spark版本4.7.0<br>
 仍需跳板，这里使用谷歌中国卫星地图代替，主要是向地图导入地面站Mission planner或控制台生成的规划路径，以.waypoint或kmz文件为主<br>
 ![1111](https://user-images.githubusercontent.com/39434325/112245151-4facce80-8c8b-11eb-9ac9-706a7bb78bc5.PNG)
 
+### CoppeliaSim仿真（2023年11月1日更新）
+截至目前，项目在GitHub已超过400 star，Gitee也即将突破400 star，之前有用户反馈三维环境不够立体，仿真样式过于简单，现在CoppeliaSim仿真环境中增加三维室内避障，以Atar算法展示效果（为便于演示，缩短UAV与target距离）<br>
+### CoppeliaSim仿真环境
+![CoppeliaSim避障1](https://github.com/wangwei39120157028/UAVS/assets/39434325/5a8e716e-f246-4598-8853-2af3dca6f73b)
+
+
 其他扩展插件请等待更新....
 
 ## Problems 关于一些普遍反映问题的解决方法<br>
