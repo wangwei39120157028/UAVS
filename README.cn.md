@@ -238,8 +238,6 @@ Android：Litchi for DJI Mavic / Phantom / Inspire / Spark版本4.7.0<br>
 截至目前，项目在GitHub已超过400 star，Gitee也即将突破400 star，之前有用户反馈三维环境不够立体，仿真样式过于简单，现在CoppeliaSim仿真环境中增加三维室内避障，以Atar算法展示效果（为便于演示，缩短UAV与target距离）<br>
 #### CoppeliaSim仿真环境<br>
 ![CoppeliaSim避障1](https://github.com/wangwei39120157028/UAVS/assets/39434325/5a8e716e-f246-4598-8853-2af3dca6f73b)
-#### 仿真环境数据化颗粒化<br>
-![CoppeliaSim避障2](https://github.com/wangwei39120157028/UAVS/assets/39434325/21a0cb8d-c770-4733-aae6-7c81bbc11944)
 #### CoppeliaSim仿真效果<br>
 ![20231101-CoppeliaSim避障 00_00_00-00_00_30](https://github.com/wangwei39120157028/UAVS/assets/39434325/b2747ce2-65a1-43d5-8bd0-37a5b1b98eb6)
 
